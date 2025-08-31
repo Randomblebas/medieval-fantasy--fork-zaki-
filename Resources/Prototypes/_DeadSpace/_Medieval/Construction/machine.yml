@@ -11,12 +11,12 @@
           conditions:
             - !type:EntityAnchored
           steps:
-            - material: MedievalManaCrystal1
+            - material: MedievalManaCrystal
               amount: 1
               doAfter: 2.5
         - to: destroyedMachineFrame
           steps:
-            - material: MedievalBoard1
+            - material: MedievalBoard
               amount: 1
               doAfter: 2.5
 
@@ -71,6 +71,6 @@
               doAfter: 5
           completed:
             - !type:SpawnPrototype
-              prototype: MedievalBoard1
+              prototype: MedievalBoard
               amount: 1
             - !type:DeleteEntity {}

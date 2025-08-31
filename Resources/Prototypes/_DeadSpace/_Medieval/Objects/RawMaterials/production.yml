@@ -294,7 +294,7 @@
   name: кристал маны
   components:
   - type: Stack
-    stackType: MedievalCrystalMana
+    stackType: MedievalManaCrystal
   - type: Sprite
     layers:
     - state: mana

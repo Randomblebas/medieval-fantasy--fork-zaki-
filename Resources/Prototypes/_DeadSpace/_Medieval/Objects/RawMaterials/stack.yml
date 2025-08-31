@@ -55,8 +55,8 @@
   maxCount: 1
 
 - type: stack
-  id: MedievalCrystalMana
+  id: MedievalManaCrystal
   name: кристалл маны
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/crystal.rsi, state: mana }
-  spawn: MedievalManaCrystal
+  spawn: MedievalManaCrystal1
   maxCount: 1

@@ -27,6 +27,7 @@
     seedId: MedievalApple
   - type: Damageable
     damageContainer: Biological
+  - type: Tag
     tags:
     - Fruit
   - type: Destructible
