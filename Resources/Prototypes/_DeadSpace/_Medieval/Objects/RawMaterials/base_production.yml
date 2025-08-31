@@ -49,3 +49,38 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: MedievalCrystalBase
+  suffix: Средневековье
+  name: кристалл
+  components:
+  - type: Sharp
+  - type: Execution
+    doAfterDuration: 4.0
+  - type: Sprite
+    sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/crystal.rsi
+  - type: Item
+    sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/crystal.rsi
+  - type: SpaceGarbage
+  - type: MeleeWeapon
+    wideAnimationRotation: -22.5
+    attackRate: 1.5
+    damage:
+      types:
+        Slash: 3.5
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Glass
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: StaticPrice
+    price: 50

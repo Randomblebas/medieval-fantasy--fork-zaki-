@@ -47,11 +47,27 @@
         sound:
           collection: MetalBreak
 
+# - type: entity
+#   abstract: true
+#   id: MedievalConstructibleMachine
+#   components:
+#   - type: Animateable
+#   - type: Machine
+#   - type: ContainerContainer
+#     containers:
+#       machine_board: !type:Container
+#       machine_parts: !type:Container
+#   - type: Construction
+#     graph: MedievalMachine
+#     node: machine
+#     containers:
+#     - machine_parts
+#     - machine_board
 
 - type: entity
   id: MedievalBaseLathe
   parent:
-  - ConstructibleMachine
+  # - MedievalConstructibleMachine
   - MedievalBaseMachine
   abstract: true
   name: станок

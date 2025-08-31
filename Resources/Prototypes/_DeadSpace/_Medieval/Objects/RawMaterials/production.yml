@@ -286,3 +286,30 @@
   components:
   - type: Stack
     count: 1
+
+- type: entity
+  parent: MedievalCrystalBase
+  id: MedievalManaCrystal
+  categories: [ HideSpawnMenu ]
+  name: кристал маны
+  components:
+  - type: Stack
+    stackType: MedievalCrystalMana
+  - type: Sprite
+    layers:
+    - state: mana
+      map: ["base"]
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalRawManaCrystal: 1000
+  - type: PointLight
+    radius: 2
+    energy: 2.5
+    color: "#47f8ff"
+
+- type: entity
+  id: MedievalManaCrystal1
+  parent: MedievalManaCrystal
+  components:
+  - type: Stack
+    count: 1

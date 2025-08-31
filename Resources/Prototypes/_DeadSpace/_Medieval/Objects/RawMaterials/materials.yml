@@ -68,3 +68,12 @@
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ore.rsi, state: adamantine }
   color: "#4B0000"
   price: 0
+
+- type: material
+  id: MedievalRawManaCrystal
+  stackEntity: MedievalManaCrystal1
+  name: medieval-raw-materials-crystal-mana
+  unit: materials-unit-chunk
+  icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/crystal.rsi, state: mana }
+  color: "#47f8ff"   # серый, камень
+  price: 0

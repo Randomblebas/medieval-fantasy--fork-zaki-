@@ -7,6 +7,7 @@ medieval-raw-materials-silver = серебро
 medieval-raw-materials-gold = золото
 medieval-raw-materials-mithril = мифрил
 medieval-raw-materials-adamantine = адамантит
+medieval-raw-materials-crystal-mana = кристал маны
 
 # Processed
 medieval-processed-materials-wood = обработанное древесина

@@ -54,7 +54,7 @@
   result: MedievalSteelIngot1
   completetime: 10
   materials:
-    MedievalSteel: 100
+    MedievalRawIron: 200
     MedievalRawCoal: 100
 
 - type: latheRecipe

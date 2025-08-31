@@ -1,4 +1,7 @@
+
+
 - type: entity
+  suffix: Средневековье
   name: яблоко
   parent: FoodProduceBase
   id: FoodMedievalApple
@@ -22,11 +25,26 @@
     heldPrefix: produce
   - type: Produce
     seedId: MedievalApple
-  - type: Tag
+  - type: Damageable
+    damageContainer: Biological
     tags:
     - Fruit
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalAppleSeeds:
+            min: 1
+            max: 2
 
 - type: entity
+  suffix: Средневековье
   name: капуста
   parent: FoodProduceBase
   id: FoodMedievalCabbage
@@ -48,11 +66,27 @@
     heldPrefix: produce
   - type: Produce
     seedId: MedievalCabbage
+  - type: Damageable
+    damageContainer: Biological
   - type: Tag
     tags:
     - Vegetable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalCabbageSeeds:
+            min: 1
+            max: 2
 
 - type: entity
+  suffix: Средневековье
   name: ягоды
   parent: FoodProduceBase
   id: FoodMedievalBerries
@@ -76,11 +110,27 @@
     heldPrefix: produce
   - type: Produce
     seedId: MedievalBerries
+  - type: Damageable
+    damageContainer: Biological
   - type: Tag
     tags:
     - Fruit
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalBerriesSeeds:
+            min: 1
+            max: 2
 
 - type: entity
+  suffix: Средневековье
   name: морковь
   parent: FoodProduceBase
   id: FoodMedievalCarrot
@@ -104,11 +154,27 @@
     heldPrefix: produce
   - type: Produce
     seedId: MedievalCarrot
+  - type: Damageable
+    damageContainer: Biological
   - type: Tag
     tags:
     - Vegetable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalCarrotSeeds:
+            min: 1
+            max: 2
 
 - type: entity
+  suffix: Средневековье
   name: вишня
   parent: FoodProduceBase
   id: FoodMedievalCherry
@@ -132,11 +198,27 @@
     heldPrefix: produce
   - type: Produce
     seedId: MedievalCherry
+  - type: Damageable
+    damageContainer: Biological
   - type: Tag
     tags:
     - Fruit
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalCherrySeeds:
+            min: 1
+            max: 2
 
 - type: entity
+  suffix: Средневековье
   name: лён
   parent: FoodProduceBase
   id: FoodMedievalFlax
@@ -158,11 +240,27 @@
     heldPrefix: produce
   - type: Produce
     seedId: MedievalFlax
+  - type: Damageable
+    damageContainer: Biological
   - type: Tag
     tags:
     - MedievalFlax
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalFlaxSeeds:
+            min: 1
+            max: 2
 
 - type: entity
+  suffix: Средневековье
   name: картошка
   parent: FoodProduceBase
   id: FoodMedievalPotato
@@ -184,11 +282,27 @@
     heldPrefix: produce
   - type: Produce
     seedId: MedievalPotato
+  - type: Damageable
+    damageContainer: Biological
   - type: Tag
     tags:
     - Vegetable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalPotatoSeeds:
+            min: 1
+            max: 2
 
 - type: entity
+  suffix: Средневековье
   name: помидор
   parent: FoodProduceBase
   id: FoodMedievalTomato
@@ -212,11 +326,27 @@
     heldPrefix: produce
   - type: Produce
     seedId: MedievalTomato
+  - type: Damageable
+    damageContainer: Biological
   - type: Tag
     tags:
     - Vegetable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalTomatoSeeds:
+            min: 1
+            max: 2
 
 - type: entity
+  suffix: Средневековье
   name: пшеница
   parent: FoodProduceBase
   id: FoodMedievalWheat
@@ -238,6 +368,21 @@
     heldPrefix: produce
   - type: Produce
     seedId: MedievalWheat
+  - type: Damageable
+    damageContainer: Biological
   - type: Tag
     tags:
     - Wheat
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalWheatSeeds:
+            min: 1
+            max: 2

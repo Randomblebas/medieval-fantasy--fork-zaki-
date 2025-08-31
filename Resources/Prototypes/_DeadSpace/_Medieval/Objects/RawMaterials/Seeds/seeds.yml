@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Средневековье
   parent: SeedBase
   name: семена яблока
   id: MedievalAppleSeeds
@@ -9,6 +10,7 @@
       sprite: _DeadSpace/_Medieval/Objects/Materials/Seeds/apple.rsi
 
 - type: entity
+  suffix: Средневековье
   parent: SeedBase
   name: семена капусты
   id: MedievalCabbageSeeds
@@ -19,6 +21,7 @@
       sprite: _DeadSpace/_Medieval/Objects/Materials/Seeds/berries.rsi
 
 - type: entity
+  suffix: Средневековье
   parent: SeedBase
   name: семена ягод
   id: MedievalBerriesSeeds
@@ -29,6 +32,7 @@
       sprite: _DeadSpace/_Medieval/Objects/Materials/Seeds/cabbage.rsi
 
 - type: entity
+  suffix: Средневековье
   parent: SeedBase
   name: семена моркови
   id: MedievalCarrotSeeds
@@ -39,6 +43,7 @@
       sprite: _DeadSpace/_Medieval/Objects/Materials/Seeds/carrot.rsi
 
 - type: entity
+  suffix: Средневековье
   parent: SeedBase
   name: семена вишни
   id: MedievalCherrySeeds
@@ -49,6 +54,7 @@
       sprite: _DeadSpace/_Medieval/Objects/Materials/Seeds/cherry.rsi
 
 - type: entity
+  suffix: Средневековье
   parent: SeedBase
   name: семена льна
   id: MedievalFlaxSeeds
@@ -59,6 +65,7 @@
       sprite: _DeadSpace/_Medieval/Objects/Materials/Seeds/flax.rsi
 
 - type: entity
+  suffix: Средневековье
   parent: SeedBase
   name: семена картошки
   id: MedievalPotatoSeeds
@@ -69,6 +76,7 @@
       sprite: _DeadSpace/_Medieval/Objects/Materials/Seeds/potato.rsi
 
 - type: entity
+  suffix: Средневековье
   parent: SeedBase
   name: семена помидора
   id: MedievalTomatoSeeds
@@ -79,6 +87,7 @@
       sprite: _DeadSpace/_Medieval/Objects/Materials/Seeds/tomato.rsi
 
 - type: entity
+  suffix: Средневековье
   parent: SeedBase
   name: семена пшеницы
   id: MedievalWheatSeeds
