@@ -6,7 +6,7 @@
 - type: latheRecipePack
   id: MedievalCarpenterTable
   recipes:
-  - MedievalTestDetail
+  - MedievalBucket
 
 - type: latheRecipePack
   id: MedievalSmelter

@@ -75,5 +75,5 @@
   name: medieval-raw-materials-crystal-mana
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/crystal.rsi, state: mana }
-  color: "#47f8ff"   # серый, камень
+  color: "#47f8ff"
   price: 0

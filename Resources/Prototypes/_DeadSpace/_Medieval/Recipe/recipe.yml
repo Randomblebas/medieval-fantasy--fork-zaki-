@@ -32,8 +32,8 @@
 ## Total Carpenter Table
 - type: latheRecipe
   parent: MedievalBaseCarpenterTable
-  id: MedievalTestDetail
-  result: MedievalCarpenterTableDetail
+  id: MedievalBucket
+  result: MedievalBucket
   completetime: 10
   materials:
     MedievalProcessedWood: 100

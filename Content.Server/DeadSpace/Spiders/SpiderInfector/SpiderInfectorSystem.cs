@@ -122,7 +122,7 @@ public sealed partial class SpiderInfectorSystem : EntitySystem
         {
             _popup.PopupEntity(Loc.GetString("Цель чем-то больна?"), uid, uid);
             return false;
-        };
+        }
 
         if (!_eggSystem.IsInfectPossible(target))
             return false;
