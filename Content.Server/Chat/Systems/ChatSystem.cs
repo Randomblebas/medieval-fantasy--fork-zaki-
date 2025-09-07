@@ -38,6 +38,7 @@ using Content.Shared.Dataset;
 using Content.DeadSpace.Interfaces.Server;
 using Content.Server.DeadSpace.Languages;
 using Robust.Server.Console;
+using Content.Shared.DeadSpace.Languages.Components;
 
 namespace Content.Server.Chat.Systems;
 

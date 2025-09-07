@@ -16,6 +16,7 @@ using Content.Server.Gravity;
 using Content.Shared.StatusEffect;
 using Content.Shared.Stunnable;
 using Robust.Shared.Timing;
+using Content.Shared.Gravity;
 
 namespace Content.Server.DeadSpace.Abilities.JumpAbility;
 
@@ -95,7 +96,7 @@ public sealed partial class JumpAbilitySystem : EntitySystem
                 || physics.BodyType == BodyType.Static)
             return;
 
-        if (_gravity.IsWeightless(uid, physics))
+        if (_gravity.IsWeightless(uid))
             return;
 
         if (component.Target == null)

@@ -6,6 +6,7 @@ using Content.Server.DeadSpace.MonkeyKing.Components;
 using Content.Shared.Movement.Systems;
 using Content.Server.Chat.Systems;
 using Content.Shared.Speech.Components;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.DeadSpace.MonkeyKing;
 
@@ -15,6 +16,7 @@ public sealed class MonkeyServantSystem : EntitySystem
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movement = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private readonly IPrototypeManager _prototype = default!;
 
     public override void Initialize()
     {
@@ -59,11 +61,10 @@ public sealed class MonkeyServantSystem : EntitySystem
         component.SpeedMulty = speed;
         component.GetDamageMulty = getDamage;
 
-        if (TryComp<VocalComponent>(uid, out var vocal))
-        {
-            _chat.TryPlayEmoteSound(uid, vocal.EmoteSounds, "Scream");
-            _chat.TryEmoteWithoutChat(uid, "Scream");
-        }
+        if (TryComp<VocalComponent>(uid, out var vocal) && vocal.EmoteSounds != null)
+            _chat.TryPlayEmoteSound(uid, _prototype.Index(vocal.EmoteSounds), "Scream");
+
+        _chat.TryEmoteWithoutChat(uid, "Scream");
 
         _movement.RefreshMovementSpeedModifiers(uid);
 

@@ -277,7 +277,7 @@ namespace Content.Server.Communications
 
             if (comp.Global)
             {
-                _chatSystem.DispatchGlobalAnnouncement(msg, title, announcementSound: comp.Sound, colorOverride: comp.Color, originalMessage: originalMessage, author: message.Actor, languageId: languageId); // DS14-Languages
+                _chatSystem.DispatchGlobalAnnouncement(msg, title, announcementSound: comp.Sound, colorOverride: comp.Color, author: message.Actor, languageId: languageId); // DS14-Languages
 
                 _adminLogger.Add(LogType.Chat, LogImpact.Low, $"{ToPrettyString(message.Actor):player} has sent the following global announcement: {msg}");
                 return;
