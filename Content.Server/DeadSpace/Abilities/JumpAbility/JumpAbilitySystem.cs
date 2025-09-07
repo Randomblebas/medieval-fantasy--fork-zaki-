@@ -34,10 +34,10 @@ public sealed partial class JumpAbilitySystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<JumpAbilityComponent, ComponentGetState>(OnGetState);
-        SubscribeLocalEvent<JumpAbilityComponent, ComponentInit>(OnComponentInit);
-        SubscribeLocalEvent<JumpAbilityComponent, ComponentShutdown>(OnShutdown);
-        SubscribeLocalEvent<JumpAbilityComponent, JumpToPointActionEvent>(DoJump);
+        SubscribeLocalEvent<DeadSpaceJumpAbilityComponent, ComponentGetState>(OnGetState);
+        SubscribeLocalEvent<DeadSpaceJumpAbilityComponent, ComponentInit>(OnComponentInit);
+        SubscribeLocalEvent<DeadSpaceJumpAbilityComponent, ComponentShutdown>(OnShutdown);
+        SubscribeLocalEvent<DeadSpaceJumpAbilityComponent, JumpToPointActionEvent>(DoJump);
     }
 
     public override void Update(float frameTime)
@@ -46,7 +46,7 @@ public sealed partial class JumpAbilitySystem : EntitySystem
             return;
 
         var curTime = _gameTiming.CurTime;
-        var query = EntityQueryEnumerator<JumpAbilityComponent>();
+        var query = EntityQueryEnumerator<DeadSpaceJumpAbilityComponent>();
         while (query.MoveNext(out var uid, out var component))
         {
             if (component.TimeUntilEndJump > curTime && component.TimeUntilNextJump <= curTime && component.IsJumps)
@@ -56,21 +56,21 @@ public sealed partial class JumpAbilitySystem : EntitySystem
         }
     }
 
-    private void OnGetState(EntityUid uid, JumpAbilityComponent component, ref ComponentGetState args)
+    private void OnGetState(EntityUid uid, DeadSpaceJumpAbilityComponent component, ref ComponentGetState args)
     {
         args.State = new JumpAnimationComponentState();
     }
-    private void OnComponentInit(EntityUid uid, JumpAbilityComponent component, ComponentInit args)
+    private void OnComponentInit(EntityUid uid, DeadSpaceJumpAbilityComponent component, ComponentInit args)
     {
         _actionsSystem.AddAction(uid, ref component.ActionJumpEntity, component.ActionJump, uid);
     }
 
-    private void OnShutdown(EntityUid uid, JumpAbilityComponent component, ComponentShutdown args)
+    private void OnShutdown(EntityUid uid, DeadSpaceJumpAbilityComponent component, ComponentShutdown args)
     {
         _actionsSystem.RemoveAction(uid, component.ActionJumpEntity);
     }
 
-    private void DoJump(EntityUid uid, JumpAbilityComponent component, JumpToPointActionEvent args)
+    private void DoJump(EntityUid uid, DeadSpaceJumpAbilityComponent component, JumpToPointActionEvent args)
     {
         if (args.Handled)
             return;
@@ -90,7 +90,7 @@ public sealed partial class JumpAbilitySystem : EntitySystem
             _audio.PlayPvs(component.JumpSound, uid, AudioParams.Default.WithVolume(3));
     }
 
-    private void Jump(EntityUid uid, JumpAbilityComponent component)
+    private void Jump(EntityUid uid, DeadSpaceJumpAbilityComponent component)
     {
         if (!TryComp<PhysicsComponent>(uid, out var physics)
                 || physics.BodyType == BodyType.Static)

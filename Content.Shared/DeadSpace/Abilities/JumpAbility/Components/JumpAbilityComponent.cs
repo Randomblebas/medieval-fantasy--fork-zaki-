@@ -2,7 +2,6 @@
 
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Audio;
 using Robust.Shared.Serialization;
 using Robust.Shared.Map;
@@ -10,10 +9,10 @@ using Robust.Shared.Map;
 namespace Content.Shared.DeadSpace.Abilities.JumpAbility.Components;
 
 [RegisterComponent, NetworkedComponent]
-public sealed partial class JumpAbilityComponent : Component
+public sealed partial class DeadSpaceJumpAbilityComponent : Component
 {
-    [DataField("actionJump", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionJump = "ActionJump";
+    [DataField]
+    public EntProtoId ActionJump = "ActionJump";
 
     [DataField("actionJumpEntity")]
     public EntityUid? ActionJumpEntity;
