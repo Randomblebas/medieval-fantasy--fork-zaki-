@@ -57,6 +57,7 @@
   suffix: Средневековье
   name: кристалл
   components:
+  - type: Material
   - type: Sharp
   - type: Execution
     doAfterDuration: 4.0

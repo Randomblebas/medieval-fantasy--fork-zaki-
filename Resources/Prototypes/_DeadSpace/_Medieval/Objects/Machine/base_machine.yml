@@ -65,12 +65,12 @@
     - machine_board
 
 - type: entity
-  id: MedievalBaseLathe
+  id: MedievalMachine
   parent:
   - MedievalConstructibleMachine
   - MedievalBaseMachine
   abstract: true
-  name: станок
+  name: машина
   components:
   - type: Appearance
   - type: WiresVisuals
@@ -85,7 +85,6 @@
         - MachineMask
         layer:
           - MachineLayer
-  - type: Lathe
   - type: MaterialStorage
   - type: Destructible
     thresholds:
@@ -111,9 +110,33 @@
   - type: Transform
     anchored: true
   - type: Pullable
+
+
+- type: entity
+  id: MedievalBaseLathe
+  parent:
+  - MedievalMachine
+  abstract: true
+  name: станок
+  components:
+  - type: Lathe
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
   - type: LatheWear
     defaultAddPoints: -1
   # - type: StaticPrice
   #   price: 800
   # - type: ResearchClient
   # - type: TechnologyDatabase
+

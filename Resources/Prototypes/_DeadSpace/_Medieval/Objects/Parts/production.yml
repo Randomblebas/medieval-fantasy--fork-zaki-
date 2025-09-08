@@ -33,3 +33,27 @@
       MatterBin: 1
       Manipulator: 3
       Glass: 1
+
+- type: entity
+  id: MedievalAlchemTableDetail
+  parent: MedievalBaseMachineDetail
+  name: деталь алхимического стола
+  components:
+  - type: MachineBoard
+    prototype: MedievalAlchemTable
+    stackRequirements: # Пока так
+      MatterBin: 1
+      Manipulator: 3
+      Glass: 1
+
+- type: entity
+  id: MedievalReagentGrinderDetail
+  parent: MedievalBaseMachineDetail
+  name: деталь алхимического стола
+  components:
+  - type: MachineBoard
+    prototype: MedievalReagentGrinder
+    stackRequirements: # Пока так
+      MatterBin: 1
+      Manipulator: 3
+      Glass: 1

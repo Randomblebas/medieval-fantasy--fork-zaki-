@@ -13,3 +13,11 @@
   pointsNeeded: 100
   addLimit:
     craft: 1
+
+- type: skill
+  id: MedievalBasicAlchem
+  name: основы алхимии
+  description: Ремесло
+  pointsNeeded: 100
+  addLimit:
+    craft: 1

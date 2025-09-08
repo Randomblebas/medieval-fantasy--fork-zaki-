@@ -8,19 +8,10 @@
   },
   "states": [
     {
-      "name": "icon"
+      "name": "grinder_empty"
     },
     {
-      "name": "inserting"
-    },
-    {
-      "name": "building",
-      "delays": [
-        [
-          0.25,
-          0.25
-        ]
-      ]
+      "name": "grinder_beaker_attached"
     }
   ]
 }
