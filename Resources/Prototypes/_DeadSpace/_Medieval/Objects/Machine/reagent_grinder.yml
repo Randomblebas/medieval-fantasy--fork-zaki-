@@ -38,6 +38,3 @@
       inputContainer: !type:Container
       machine_board: !type:Container
       machine_parts: !type:Container
-  - type: Icon
-    sprite: _DeadSpace/_Medieval/Objects/Machines/grinder.rsi
-    state: icon
