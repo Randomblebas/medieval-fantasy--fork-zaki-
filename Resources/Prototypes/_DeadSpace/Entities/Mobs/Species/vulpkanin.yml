@@ -61,7 +61,7 @@
     proto: vulpkanin
   - type: Language
     selectedLanguage: GeneralLanguage
-    languagesId:
+    knownLanguages:
     - VulpkaninLanguage
     - GeneralLanguage
   # - type: FootPrints

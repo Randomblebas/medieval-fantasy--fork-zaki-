@@ -1,4 +1,14 @@
 - type: entity
+  name: трава
+  parent: FoodProduceBase
+  id: MedievalBaseHerbItem
+  suffix: Средневековье
+  components:
+  - type: SolutionContainerManager
+  - type: Sprite
+  - type: Extractable
+
+- type: entity
   name: глазница
   parent: MedievalBaseHerbItem
   id: MedievalGlaznicaItem

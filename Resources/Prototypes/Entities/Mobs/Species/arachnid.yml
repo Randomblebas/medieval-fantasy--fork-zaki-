@@ -126,7 +126,7 @@
   - type: Skill # DS14
   - type: Language # DS14-Languages
     selectedLanguage: GeneralLanguage
-    languagesId:
+    knownLanguages:
     - GeneralLanguage
     - ArachnidLanguage
   # - type: FootPrints # Backmen-footsteps

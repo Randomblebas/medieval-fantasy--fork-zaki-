@@ -95,7 +95,7 @@
   - type: EmotePanel # DS14-Emote-panel
   - type: Language
     selectedLanguage: GeneralLanguage
-    languagesId:
+    knownLanguages:
     - XenomorphLanguage
     - GeneralLanguage
   # - type: FootPrints

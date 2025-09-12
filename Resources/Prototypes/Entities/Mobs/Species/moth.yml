@@ -133,7 +133,7 @@
   - type: Skill # DS14
   - type: Language # DS14-Languages
     selectedLanguage: GeneralLanguage
-    languagesId:
+    knownLanguages:
     - GeneralLanguage
     - MothLanguage
   # - type: FootPrints # Backmen-footsteps
