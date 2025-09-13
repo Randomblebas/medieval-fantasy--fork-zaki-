@@ -20,7 +20,7 @@
   maxCount: 1
 
 - type: stack
-  id: MedievalSilverIngot
+  id: MedievalProcessedSilver
   name: обработанное серебро
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ingot.rsi, state: silver }
   spawn: MedievalSilverIngot1

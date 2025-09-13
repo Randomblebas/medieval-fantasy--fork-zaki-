@@ -21,7 +21,7 @@ public sealed class LatheWearSystem : EntitySystem
             currentPoints = component.DefaultAddPoints;
 
         if (TryComp<WearComponent>(uid, out var wearComp))
-            _wear.AddWear(uid, currentPoints * args.Quantity, wearComp);
+            _wear.AddWear(uid, component.Damage * currentPoints * args.Quantity, wearComp);
     }
 
 }

@@ -37,12 +37,27 @@
   id: TestSkillCircuitImprinter
   components:
   - type: LatheWear
-    defaultAddPoints: -30
+    defaultAddPoints: 1
     addPoints:
-      ProtolatheMachineCircuitboard: -100
+      ProtolatheMachineCircuitboard: 2
+    damage:
+      type:
+        Structural: 5
   - type: Wear
-    maxPoints: 1000
-    currentPoints: 1000
+  - type: Damageable
+    damageContainer: MedievalMachine
+    damageModifierSet: MedievalLathe
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
   - type: NeededSkillForInteract
     neededSkills:
     - test
@@ -78,9 +93,24 @@
       types:
         Blunt: 1
   - type: Wear
-    currentPoints: 5
+  - type: Damageable
+    damageContainer: MedievalInorganic
+    damageModifierSet: MedievalBook
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
   - type: AddWearAfterUse
-    addPoints: -1
+    damage:
+      type:
+        Slash: 1
   - type: LearnSkillWhenUsing
     duration: 2
     skills:

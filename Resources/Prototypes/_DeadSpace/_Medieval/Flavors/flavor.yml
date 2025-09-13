@@ -27,3 +27,19 @@
   id: tangy
   flavorType: Base
   description: flavor-base-tangy
+
+
+- type: flavor
+  id: acrid
+  flavorType: Base
+  description: flavor-base-acrid
+
+- type: flavor
+  id: invigorating
+  flavorType: Base
+  description: flavor-base-invigorating
+
+- type: flavor
+  id: mystical
+  flavorType: Base
+  description: flavor-base-mystical

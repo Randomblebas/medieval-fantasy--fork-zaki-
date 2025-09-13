@@ -53,7 +53,7 @@ public sealed class DamageToClothingSystem : EntitySystem
         {
             var pick = _random.Next(0, wearables.Count);
             var (ent, wearComp) = wearables[pick];
-            _wear.AddWear(ent, -1, wearComp);
+            _wear.AddWear(ent, args.Damage, wearComp);
         }
     }
 

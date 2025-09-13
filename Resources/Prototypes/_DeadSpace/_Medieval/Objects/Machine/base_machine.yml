@@ -5,8 +5,6 @@
   suffix: Средневековье
   components:
   - type: Wear
-    currentPoints: 100
-    maxPoints: 100
   - type: Animateable
   - type: InteractionOutline
   - type: Anchorable
@@ -27,19 +25,13 @@
         layer:
         - MachineLayer
   - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
+    damageContainer: MedievalMachine
+    damageModifierSet: MedievalLathe
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
-      behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-    - trigger:
-        !type:DamageTrigger
-        damage: 100
+        damage: 1000
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -134,7 +126,9 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: LatheWear
-    defaultAddPoints: -1
+    damage:
+      type:
+        Structural: 5
   # - type: StaticPrice
   #   price: 800
   # - type: ResearchClient

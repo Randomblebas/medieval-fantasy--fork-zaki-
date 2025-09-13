@@ -1,7 +1,10 @@
 // Мёртвый Космос, Licensed under custom terms with restrictions on public hosting and commercial use, full text: https://raw.githubusercontent.com/dead-space-server/space-station-14-fobos/master/LICENSE.TXT
 
 using Content.Server.DeadSpace.Medieval.Wear.Components;
+using Content.Server.Destructible;
+using Content.Shared.Damage;
 using Content.Shared.Examine;
+using Content.Shared.FixedPoint;
 using Robust.Server.Audio;
 
 namespace Content.Server.DeadSpace.Medieval.Wear;
@@ -9,6 +12,8 @@ namespace Content.Server.DeadSpace.Medieval.Wear;
 public sealed class WearSystem : EntitySystem
 {
     [Dependency] private readonly AudioSystem _audio = default!;
+    [Dependency] private readonly DestructibleSystem _destructible = default!;
+    [Dependency] private readonly DamageableSystem _damage = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -18,33 +23,39 @@ public sealed class WearSystem : EntitySystem
 
     private void OnExamine(EntityUid uid, WearComponent component, ExaminedEvent args)
     {
-        args.PushMarkup(Loc.GetString("wear-exm-info", ("points", component.CurrentPoints.ToString())));
+        var remaining = GetRemainingDurability(uid);
+
+        args.PushMarkup(Loc.GetString("wear-exm-info", ("points", Math.Round(remaining.Float()).ToString())));
     }
 
-    public void AddWear(EntityUid uid, int ammount, WearComponent? component = null)
+    public void AddWear(EntityUid uid, DamageSpecifier damage, WearComponent? component = null)
     {
         if (!Resolve(uid, ref component, false))
             return;
 
-        component.CurrentPoints += ammount;
-        Update(uid, component);
+        _damage.TryChangeDamage(
+                uid,
+                damage,
+                origin: uid,
+                ignoreResistances: false,
+                interruptsDoAfters: false);
+
+        if (component.Sound != null)
+            _audio.PlayPvs(component.Sound, Transform(uid).Coordinates);
+
     }
 
-    public void Update(EntityUid uid, WearComponent? component = null)
+    public FixedPoint2 GetRemainingDurability(EntityUid uid, DamageableComponent? damageable = null, DestructibleComponent? destructible = null)
     {
-        if (!Resolve(uid, ref component, false))
-            return;
+        if (!Resolve(uid, ref damageable))
+            return FixedPoint2.Zero;
 
-        component.CurrentPoints = Math.Min(component.MaxPoints, component.CurrentPoints);
+        if (!Resolve(uid, ref destructible))
+            return FixedPoint2.Zero;
 
-        if (component.CurrentPoints <= 0)
-        {
-            if (component.BreakSound != null)
-                _audio.PlayPvs(component.BreakSound, Transform(uid).Coordinates);
+        var destroyedAt = _destructible.DestroyedAt(uid, destructible);
 
-            QueueDel(uid);
-        }
+        return FixedPoint2.Max(destroyedAt - damageable.TotalDamage, FixedPoint2.Zero);
     }
-
 
 }

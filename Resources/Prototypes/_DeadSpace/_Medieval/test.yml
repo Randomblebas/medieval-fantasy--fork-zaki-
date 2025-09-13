@@ -36,8 +36,34 @@
         color: "#77f3b7"
       - state: trinkets-equipped-INNERCLOTHING
   - type: Wear
-    currentPoints: 10
-    maxPoints: 10
+  - type: Damageable
+    damageContainer: MedievalClothing
+    damageModifierSet: MedievalFlaxClothing
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalAppleSeeds:
+            min: 1
+            max: 2
+  - type: Storage
+    grid:
+    - 0,0,6,3
+    maxItemSize: Huge
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
 
 - type: entity
   parent: BaseItem

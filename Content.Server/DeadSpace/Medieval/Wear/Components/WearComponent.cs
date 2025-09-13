@@ -7,19 +7,7 @@ namespace Content.Server.DeadSpace.Medieval.Wear.Components;
 [RegisterComponent]
 public sealed partial class WearComponent : Component
 {
-    /// <summary>
-    ///     Текущие очки износа
-    /// </summary>
-    [DataField]
-    public int CurrentPoints = 0;
-
-    /// <summary>
-    ///     Максимум очков износа
-    /// </summary>
-    [DataField]
-    public int MaxPoints = 100;
-
     [DataField]
     [ViewVariables(VVAccess.ReadOnly)]
-    public SoundSpecifier? BreakSound = default!;
+    public SoundSpecifier? Sound = default!;
 }
