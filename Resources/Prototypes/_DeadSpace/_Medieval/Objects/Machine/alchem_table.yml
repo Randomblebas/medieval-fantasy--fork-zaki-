@@ -57,4 +57,4 @@
     - Chemist
   - type: NeededSkillForInteract
     neededSkills:
-    - MedievalBasicAlchem
+    - MedievalAlchem
