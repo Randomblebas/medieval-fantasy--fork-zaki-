@@ -156,15 +156,22 @@
   color: "#fff6c4"
   physicalDesc: reagent-physical-desc-soothing
   metabolisms:
-    Medicine:
+    Narcotic:
+      effects:
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: MedievalRomashka
+          min: 20
+        key: ForcedSleep
+        component: ForcedSleeping
+        refresh: false
+        type: Add
+    Poison:
+      metabolismRate: 0.05
       effects:
         - !type:SatiateHunger
           factor: 0.5
-        - !type:Sleepiness
-          probability: 0.1
-          conditions:
-            - !type:ReagentThreshold
-              min: 2.0
         - !type:HealthChange
           conditions:
             - !type:ReagentThreshold

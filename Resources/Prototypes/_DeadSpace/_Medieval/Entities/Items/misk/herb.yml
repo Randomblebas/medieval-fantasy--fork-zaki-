@@ -7,6 +7,7 @@
   - type: SolutionContainerManager
   - type: Sprite
     sprite: _DeadSpace/_Medieval/Objects/Flora/herbs.rsi
+    state: krovavaya_roza2
   - type: Extractable
 
 - type: entity
