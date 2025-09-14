@@ -1,0 +1,34 @@
+- type: tile
+  id: MedievalFloorWoodChessDark
+  name: tiles-wood-chess-dark
+  sprite: /Textures/_Corvax/Tiles/wood_chess_dark.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: MedievalLattice
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWoodDark
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalLattice
+  name: tiles-medieval-lattice
+  sprite: /Textures/_DeadSpace/_Medieval/Tiles/lattice.png
+  baseTurf: MedievalDirt
+  isSubfloor: true
+  deconstructTools: [ Cutting ]
+  weather: true
+  footstepSounds:
+    collection: FootstepCatwalk
+  friction: 0.3
+  isSpace: true
+  itemDrop: PartRodMetal1
+  heatCapacity: 10000
