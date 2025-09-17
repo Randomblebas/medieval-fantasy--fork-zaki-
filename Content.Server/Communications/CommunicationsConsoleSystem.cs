@@ -270,8 +270,6 @@ namespace Content.Server.Communications
 
             // DS14-Languages-End
 
-            msg += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author;
-
             if (comp.AnnounceSentBy)
                 msg += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author;
 

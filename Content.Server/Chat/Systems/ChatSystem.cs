@@ -635,7 +635,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             // DS14-Languages-Start
             if (language != null && !_language.KnowsLanguage(listener, language.SelectedLanguage))
             {
-                if (data.Range <= WhisperClearRange)
+                if (data.Range <= WhisperClearRange || data.Observer)
                     _chatManager.ChatMessageToOne(ChatChannel.Whisper, lexiconMessage, newWrappedMessage, source, false, session.Channel);
                 else if (_examineSystem.InRangeUnOccluded(source, listener, WhisperMuffledRange))
                     _chatManager.ChatMessageToOne(ChatChannel.Whisper, newObfuscatedMessage, newWrappedobfuscatedMessage, source, false, session.Channel);
@@ -648,6 +648,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
             if (data.Range <= WhisperClearRange || data.Observer)
                 _chatManager.ChatMessageToOne(ChatChannel.Whisper, message, wrappedMessage, source, false, session.Channel);
+
             //If listener is too far, they only hear fragments of the message
             else if (_examineSystem.InRangeUnOccluded(source, listener, WhisperMuffledRange))
                 _chatManager.ChatMessageToOne(ChatChannel.Whisper, obfuscatedMessage, wrappedobfuscatedMessage, source, false, session.Channel);
