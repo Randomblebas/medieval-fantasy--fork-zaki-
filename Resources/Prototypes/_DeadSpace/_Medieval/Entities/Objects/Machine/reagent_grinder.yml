@@ -38,3 +38,7 @@
       inputContainer: !type:Container
       machine_board: !type:Container
       machine_parts: !type:Container
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedWood: 2
+      MedievalRawManaCrystal: 1

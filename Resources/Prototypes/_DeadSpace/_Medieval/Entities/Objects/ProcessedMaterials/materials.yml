@@ -4,7 +4,7 @@
   name: medieval-processed-materials-wood
   color: "#8B4513"
   icon: { sprite:  _DeadSpace/_Medieval/Objects/Materials/board.rsi, state: board }
-  price: 0
+  price: 141
 
 - type: material
   id: MedievalProcessedIron
@@ -13,7 +13,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ingot.rsi, state: iron }
   color: "#8A8A8A"   # серебристо-серый, железо
-  price: 0
+  price: 443
 
 - type: material
   id: MedievalSteel
@@ -22,7 +22,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ingot.rsi, state: steel }
   color: "#B0C4DE"   # серебристо-серый, железо
-  price: 0
+  price: 1076
 
 - type: material
   id: MedievalProcessedSilver
@@ -31,7 +31,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ingot.rsi, state: silver }
   color: "#C0C0FF"   # светло-серебристо-голубой, серебро
-  price: 0
+  price: 1787
 
 - type: material
   id: MedievalProcessedGold
@@ -40,7 +40,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ingot.rsi, state: gold }
   color: "#FFD700"   # золотой, золото
-  price: 0
+  price: 3932
 
 - type: material
   id: MedievalProcessedMithril
@@ -49,7 +49,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ingot.rsi, state: mithril }
   color: "#9370DB"   # средний фиолетовый (medium purple)
-  price: 0
+  price: 4302
 
 - type: material
   id: MedievalProcessedAdamantine
@@ -58,7 +58,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ingot.rsi, state: adamantine }
   color: "#4B0000"
-  price: 0
+  price: 7547
 
 - type: material
   id: MedievalProcessedStone
@@ -67,4 +67,4 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/stone.rsi, state: stone }
   color: "#808080"   # серый, камень
-  price: 0
+  price: 88

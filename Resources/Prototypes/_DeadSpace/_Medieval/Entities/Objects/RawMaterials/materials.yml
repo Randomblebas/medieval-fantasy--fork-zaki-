@@ -4,7 +4,7 @@
   name: medieval-raw-materials-wood
   color: "#8B4513"   # коричневый, древесина
   icon: { sprite: _DeadSpace/_Medieval/Objects/Materials/log.rsi, state: log }
-  price: 0
+  price: 96
 
 - type: material
   id: MedievalRawStone
@@ -13,7 +13,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ore.rsi, state: stone }
   color: "#808080"   # серый, камень
-  price: 0
+  price: 19
 
 - type: material
   id: MedievalRawCoal
@@ -22,7 +22,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ore.rsi, state: coal }
   color: "#2F4F4F"   # тёмный серо-чёрный, уголь
-  price: 0
+  price: 76
 
 - type: material
   id: MedievalRawIron
@@ -31,7 +31,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ore.rsi, state: iron }
   color: "#C0C0C0"   # серебристо-серый, железо
-  price: 0
+  price: 153
 
 - type: material
   id: MedievalRawSilver
@@ -40,7 +40,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ore.rsi, state: silver }
   color: "#C0C0FF"   # светло-серебристо-голубой, серебро
-  price: 0
+  price: 307
 
 - type: material
   id: MedievalRawGold
@@ -49,7 +49,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ore.rsi, state: gold }
   color: "#FFD700"   # золотой, золото
-  price: 0
+  price: 614
 
 - type: material
   id: MedievalRawMithril
@@ -58,7 +58,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ore.rsi, state: mithril }
   color: "#9370DB"   # средний фиолетовый (medium purple)
-  price: 0
+  price: 1229
 
 - type: material
   id: MedievalRawAdamantine
@@ -67,7 +67,7 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/ore.rsi, state: adamantine }
   color: "#4B0000"
-  price: 0
+  price: 2458
 
 - type: material
   id: MedievalRawManaCrystal
@@ -76,4 +76,4 @@
   unit: materials-unit-chunk
   icon: { sprite: /Textures/_DeadSpace/_Medieval/Objects/Materials/crystal.rsi, state: mana }
   color: "#47f8ff"
-  price: 0
+  price: 307

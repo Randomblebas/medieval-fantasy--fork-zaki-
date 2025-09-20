@@ -7,5 +7,5 @@ tiles-medieval-grass-crystal = кристаллическая трава
 tiles-medieval-grass-red = красная трава
 tiles-medieval-grass-dark = тёмная трава
 tiles-medieval-grass-dark2 = тёмная трава 2
-tiles-medieval-snow-ash = снег
+tiles-medieval-snow = снег
 tiles-medieval-ash = пепел

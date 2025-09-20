@@ -5,7 +5,7 @@
   id: MedievalAppleSeeds
   components:
     - type: StaticPrice
-      price: 0
+      price: 3
     - type: Seed
       seedId: MedievalApple
     - type: Sprite
@@ -18,7 +18,7 @@
   id: MedievalCabbageSeeds
   components:
     - type: StaticPrice
-      price: 0
+      price: 1
     - type: Seed
       seedId: MedievalCabbage
     - type: Sprite
@@ -31,7 +31,7 @@
   id: MedievalBerriesSeeds
   components:
   - type: StaticPrice
-    price: 0
+    price: 2
   - type: Seed
     seedId: MedievalBerries
   - type: Sprite
@@ -44,7 +44,7 @@
   id: MedievalCarrotSeeds
   components:
     - type: StaticPrice
-      price: 0
+      price: 2
     - type: Seed
       seedId: MedievalCarrot
     - type: Sprite
@@ -57,7 +57,7 @@
   id: MedievalCherrySeeds
   components:
     - type: StaticPrice
-      price: 0
+      price: 3
     - type: Seed
       seedId: MedievalCherry
     - type: Sprite
@@ -70,7 +70,7 @@
   id: MedievalFlaxSeeds
   components:
     - type: StaticPrice
-      price: 0
+      price: 0.3
     - type: Seed
       seedId: MedievalFlax
     - type: Sprite
@@ -83,7 +83,7 @@
   id: MedievalPotatoSeeds
   components:
     - type: StaticPrice
-      price: 0
+      price: 1
     - type: Seed
       seedId: MedievalPotato
     - type: Sprite
@@ -96,7 +96,7 @@
   id: MedievalTomatoSeeds
   components:
     - type: StaticPrice
-      price: 0
+      price: 1
     - type: Seed
       seedId: MedievalTomato
     - type: Sprite
@@ -109,7 +109,7 @@
   id: MedievalWheatSeeds
   components:
     - type: StaticPrice
-      price: 0
+      price: 1
     - type: Seed
       seedId: MedievalWheat
     - type: Sprite

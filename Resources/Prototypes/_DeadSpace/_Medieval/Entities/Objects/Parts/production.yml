@@ -5,9 +5,9 @@
   components:
   - type: MachineBoard
     prototype: MedievalSawmill
-    stackRequirements: # Пока так
-      Manipulator: 3
-      Glass: 1
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedWood: 4
 
 - type: entity
   id: MedievalCarpenterTableDetail
@@ -16,9 +16,9 @@
   components:
   - type: MachineBoard
     prototype: MedievalCarpenterTable
-    stackRequirements: # Пока так
-      Manipulator: 3
-      Glass: 1
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedWood: 3
 
 - type: entity
   id: MedievalSmelterDetail
@@ -27,8 +27,9 @@
   components:
   - type: MachineBoard
     prototype: MedievalSmelter
-    stackRequirements: # Пока так
-      Glass: 1
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedStone: 5
 
 - type: entity
   id: MedievalAlchemTableDetail
@@ -37,18 +38,20 @@
   components:
   - type: MachineBoard
     prototype: MedievalAlchemTable
-    stackRequirements: # Пока так
-      Glass: 1
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedWood: 4
 
 - type: entity
   id: MedievalReagentGrinderDetail
   parent: MedievalBaseMachineDetail
-  name: деталь алхимического стола
+  name: деталь измельчителя
   components:
   - type: MachineBoard
     prototype: MedievalReagentGrinder
-    stackRequirements: # Пока так
-      Glass: 1
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedWood: 2
 
 - type: entity
   id: MedievalHotplateDetail
@@ -57,5 +60,7 @@
   components:
   - type: MachineBoard
     prototype: MedievalHotplate
-    stackRequirements: # Пока так
-      Glass: 1
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedWood: 1
+

@@ -3,7 +3,7 @@
   abstract: true
   id: MedievalBaseSawmillRecipe
   categories:
-  - MedievalWoodProcessing
+  - MedievalWoodProcessingCategory
   completetime: 10
 
 - type: latheRecipe
@@ -11,23 +11,23 @@
   id: MedievalBaseToolsRecipe
   completetime: 10
   categories:
-  - MedievalWoodProcessing
+  - MedievalToolsCategory
 
 - type: latheRecipe
   abstract: true
   id: MedievalBaseTileRecipe
   completetime: 10
   materials:
-    MedievalProcessedWood: 300
+    MedievalProcessedWood: 0.3
   categories:
-  - MedievalTile
+  - MedievalTileCategory
 
 - type: latheRecipe
   abstract: true
   id: MedievalBaseSmelter
   completetime: 10
   categories:
-  - MedievalBlacksmithing
+  - MedievalBlacksmithingCategory
 
 ## Total Sawmill
 - type: latheRecipe
@@ -36,7 +36,7 @@
   result: MedievalBoard1
   completetime: 10
   materials:
-    MedievalRawWood: 1000
+    MedievalRawWood: 1
 
 ## Total Carpenter Table
 - type: latheRecipe
@@ -45,7 +45,7 @@
   result: MedievalBucket
   completetime: 10
   materials:
-    MedievalProcessedWood: 1000
+    MedievalProcessedWood: 1
 
 - type: latheRecipe
   parent: MedievalBaseTileRecipe
@@ -144,8 +144,8 @@
   result: MedievalIronIngot1
   completetime: 10
   materials:
-    MedievalRawIron: 1000
-    MedievalRawCoal: 1000
+    MedievalRawIron: 2
+    MedievalRawCoal: 1
 
 - type: latheRecipe
   parent: MedievalBaseSmelter
@@ -153,8 +153,8 @@
   result: MedievalSteelIngot1
   completetime: 10
   materials:
-    MedievalRawIron: 2000
-    MedievalRawCoal: 1000
+    MedievalRawIron: 3
+    MedievalRawCoal: 1
 
 - type: latheRecipe
   parent: MedievalBaseSmelter
@@ -162,8 +162,8 @@
   result: MedievalSilverIngot1
   completetime: 10
   materials:
-    MedievalRawSilver: 1000
-    MedievalRawCoal: 1000
+    MedievalRawSilver: 5
+    MedievalRawCoal: 1
 
 - type: latheRecipe
   parent: MedievalBaseSmelter
@@ -171,8 +171,8 @@
   result: MedievalGoldIngot1
   completetime: 10
   materials:
-    MedievalRawGold: 1000
-    MedievalRawCoal: 1000
+    MedievalRawGold: 5
+    MedievalRawCoal: 1
 
 - type: latheRecipe
   parent: MedievalBaseSmelter
@@ -180,8 +180,8 @@
   result: MedievalMithrilIngot1
   completetime: 10
   materials:
-    MedievalRawMithril: 1000
-    MedievalRawCoal: 1000
+    MedievalRawMithril: 3
+    MedievalRawCoal: 1
 
 - type: latheRecipe
   parent: MedievalBaseSmelter
@@ -189,5 +189,5 @@
   result: MedievalAdamantineIngot1
   completetime: 10
   materials:
-    MedievalRawAdamantine: 1000
-    MedievalRawCoal: 1000
+    MedievalRawAdamantine: 3
+    MedievalRawCoal: 1

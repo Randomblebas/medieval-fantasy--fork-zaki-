@@ -1,11 +1,15 @@
 - type: latheCategory
-  id: MedievalBaseToolsRecipe
+  id: MedievalToolsCategory
   name: lathe-medieval-category-tools
 
 - type: latheCategory
-  id: MedievalTile
+  id: MedievalTileCategory
   name: lathe-medieval-category-tile
 
 - type: latheCategory
-  id: MedievalBlacksmithing
+  id: MedievalBlacksmithingCategory
   name: lathe-medieval-category-blacksmithing
+
+- type: latheCategory
+  id: MedievalWoodProcessingCategory
+  name: lathe-medieval-category-wood-processing

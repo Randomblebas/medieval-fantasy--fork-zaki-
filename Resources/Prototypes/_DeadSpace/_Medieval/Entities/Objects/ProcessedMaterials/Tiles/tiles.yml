@@ -17,7 +17,7 @@
     heldPrefix: grass
   - type: FloorTile
     outputs:
-    - MedievalFloorAstroGrass
+    - MedievalFloorGrass
   - type: Stack
     stackType: MedievalFloorTileGrass
 
@@ -51,9 +51,9 @@
     heldPrefix: crysgrass
   - type: FloorTile
     outputs:
-    - MedievalFloorGrassGrassCrystal
+    - MedievalFloorGrassCrystal
   - type: Stack
-    stackType: MedievalFloorTileGrassGrassCrystal
+    stackType: MedievalFloorTileGrassCrystal
 
 - type: entity
   id: MedievalFloorTileItemGrassRed
@@ -68,9 +68,9 @@
     heldPrefix: redgrass
   - type: FloorTile
     outputs:
-    - MedievalFloorGrassGrassRed
+    - MedievalFloorGrassRed
   - type: Stack
-    stackType: MedievalFloorTileGrassGrassRed
+    stackType: MedievalFloorTileGrassRed
 
 - type: entity
   id: MedievalFloorTileItemGrassDark
@@ -104,7 +104,7 @@
     outputs:
     - MedievalFloorGrassDark2
   - type: Stack
-    stackType: MedievalFloorTileGrassGrassDark2
+    stackType: MedievalFloorTileGrassDark2
 
 # Снег
 
@@ -148,7 +148,7 @@
 # Дерево
 
 - type: entity
-  name: parquet wood floor tile
+  name: паркет деревянная напольная плитка
   parent: MedievalFloorTileItemBase
   id: MedievalFloorTileItemWoodParquet
   components:

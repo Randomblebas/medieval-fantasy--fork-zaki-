@@ -27,7 +27,7 @@
     seedId: towercap
   - type: PhysicalComposition
     materialComposition:
-      MedievalRawWood: 1000
+      MedievalRawWood: 1
 
 - type: entity
   id: MedievalLog1
@@ -50,7 +50,7 @@
       map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalRawStone: 1000
+      MedievalRawStone: 1
   - type: Item
     inhandVisuals:
       left:
@@ -88,7 +88,7 @@
       map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalRawCoal: 1000
+      MedievalRawCoal: 1
   - type: Item
     inhandVisuals:
       left:
@@ -126,7 +126,7 @@
       map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalRawIron: 1000
+      MedievalRawIron: 1
   - type: Item
     inhandVisuals:
       left:
@@ -164,7 +164,7 @@
       map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalRawSilver: 1000
+      MedievalRawSilver: 1
   - type: Item
     inhandVisuals:
       left:
@@ -202,7 +202,7 @@
       map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalRawGold: 1000
+      MedievalRawGold: 1
   - type: Item
     inhandVisuals:
       left:
@@ -240,7 +240,7 @@
       map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalRawMithril: 1000
+      MedievalRawMithril: 1
   - type: Item
     inhandVisuals:
       left:
@@ -272,7 +272,7 @@
       map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalRawAdamantine: 1000
+      MedievalRawAdamantine: 1
   - type: Item
     inhandVisuals:
       left:
@@ -301,7 +301,7 @@
       map: ["base"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalRawManaCrystal: 1000
+      MedievalRawManaCrystal: 1
   - type: PointLight
     radius: 2
     energy: 2.5

@@ -58,3 +58,7 @@
   - type: NeededSkillForInteract
     neededSkills:
     - MedievalAlchem
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedWood: 5
+      MedievalRawManaCrystal: 1

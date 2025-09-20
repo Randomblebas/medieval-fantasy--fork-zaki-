@@ -8,7 +8,7 @@
   description: Сочное и сладкое яблоко, символ изобилия.
   components:
   - type: StaticPrice
-    price: 10
+    price: 14.5
   - type: FlavorProfile
     flavors:
       - apple
@@ -54,7 +54,7 @@
   description: Круглый кочан капусты, полезный и хрустящий.
   components:
   - type: StaticPrice
-    price: 10
+    price: 9
   - type: FlavorProfile
     flavors:
       - cabbage
@@ -98,7 +98,7 @@
   description: Горсть лесных ягод, сладких и ароматных.
   components:
   - type: StaticPrice
-    price: 10
+    price: 14
   - type: FlavorProfile
     flavors:
       - berry
@@ -144,7 +144,7 @@
   description: Ярко-оранжевая морковь, полезна для глаз.
   components:
   - type: StaticPrice
-    price: 10
+    price: 7
   - type: FlavorProfile
     flavors:
       - carrot
@@ -190,7 +190,7 @@
   description: Кисло-сладкая вишня, любимое лакомство летом.
   components:
   - type: StaticPrice
-    price: 10
+    price: 13.6
   - type: FlavorProfile
     flavors:
       - cherry
@@ -236,7 +236,7 @@
   description: Стебель льна, из которого можно сделать нить.
   components:
   - type: StaticPrice
-    price: 10
+    price: 2
   - type: FlavorProfile
     flavors:
       - cotton
@@ -280,7 +280,7 @@
   description: Сытный клубень картофеля, основа крестьянского стола.
   components:
   - type: StaticPrice
-    price: 10
+    price: 12.7
   - type: FlavorProfile
     flavors:
       - potato
@@ -324,7 +324,7 @@
   description: Сочный красный помидор, хорош как свежим, так и в рагу.
   components:
   - type: StaticPrice
-    price: 10
+    price: 9
   - type: FlavorProfile
     flavors:
       - tomato
@@ -370,7 +370,7 @@
   description: Золотистые колосья пшеницы, источник муки и хлеба.
   components:
   - type: StaticPrice
-    price: 10
+    price: 7
   - type: FlavorProfile
     flavors:
       - wheat

@@ -28,6 +28,10 @@
   - type: NeededSkillForInteract
     neededSkills:
     - MedievalWoodProcessing
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedWood: 5
+      MedievalRawManaCrystal: 1
 
 - type: entity
   parent: MedievalBaseLathe
@@ -58,6 +62,10 @@
   - type: NeededSkillForInteract
     neededSkills:
     - MedievalWoodProcessing
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedWood: 4
+      MedievalRawManaCrystal: 1
 
 # Руды
 - type: entity
@@ -89,3 +97,8 @@
   - type: NeededSkillForInteract
     neededSkills:
     - MedievalBasicBlacksmithing
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedWood: 1
+      MedievalRawManaCrystal: 1
+      MedievalProcessedStone: 5

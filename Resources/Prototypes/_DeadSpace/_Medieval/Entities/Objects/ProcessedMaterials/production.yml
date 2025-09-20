@@ -22,7 +22,7 @@
   - type: Appearance
   - type: PhysicalComposition
     materialComposition:
-      MedievalProcessedWood: 1000
+      MedievalProcessedWood: 1
   - type: Tag
     tags:
     - CarpenterTableMaterialStorage
@@ -61,7 +61,7 @@
       map: ["base"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalProcessedIron: 1000
+      MedievalProcessedIron: 1
   - type: Item
     inhandVisuals:
       left:
@@ -90,7 +90,7 @@
       map: ["base"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalSteel: 1000
+      MedievalSteel: 1
   - type: Item
     inhandVisuals:
       left:
@@ -119,7 +119,7 @@
       map: ["base"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalProcessedSilver: 1000
+      MedievalProcessedSilver: 1
   - type: Item
     inhandVisuals:
       left:
@@ -148,7 +148,7 @@
       map: ["base"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalProcessedGold: 1000
+      MedievalProcessedGold: 1
   - type: Item
     inhandVisuals:
       left:
@@ -177,7 +177,7 @@
       map: ["base"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalProcessedMithril: 1000
+      MedievalProcessedMithril: 1
   - type: Item
     inhandVisuals:
       left:
@@ -206,7 +206,7 @@
       map: ["base"]
   - type: PhysicalComposition
     materialComposition:
-      MedievalProcessedAdamantine: 1000
+      MedievalProcessedAdamantine: 1
   - type: Item
     inhandVisuals:
       left:
@@ -253,7 +253,7 @@
       - state: stone-inhand-right
   - type: PhysicalComposition
     materialComposition:
-      MedievalProcessedStone: 1000
+      MedievalProcessedStone: 1
 
 - type: entity
   id: MedievalProcessedStone1

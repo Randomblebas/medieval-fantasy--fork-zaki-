@@ -27,6 +27,7 @@
         - to: machine
           conditions:
             - !type:EntityAnchored
+            - !type:MachineFrameComplete
           steps:
             - tool: Screwing
               doAfter: 0.5
