@@ -194,6 +194,18 @@
 # Камень
 
 - type: tile
+  id: MedievalFloorStone
+  name: tiles-stone-floor
+  sprite: /Textures/_DeadSpace/Tiles/stone_floor.png
+  baseTurf: MedievalLattice
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: MedievalFloorTileItemStone
+  heatCapacity: 10000
+
+- type: tile
   id: MedievalFloorAsh
   name: tiles-medieval-ash
   sprite: /Textures/_DeadSpace/_Medieval/Tiles/Ash/grass.png

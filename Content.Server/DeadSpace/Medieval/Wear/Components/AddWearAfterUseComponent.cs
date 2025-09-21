@@ -1,6 +1,7 @@
 // Мёртвый Космос, Licensed under custom terms with restrictions on public hosting and commercial use, full text: https://raw.githubusercontent.com/dead-space-server/space-station-14-fobos/master/LICENSE.TXT
 
 using Content.Shared.Damage;
+using Content.Shared.Whitelist;
 
 namespace Content.Server.DeadSpace.Medieval.Wear.Components;
 
@@ -15,6 +16,9 @@ public sealed partial class AddWearAfterUseComponent : Component
 
     [DataField]
     public WearTrigger Triggers = WearTrigger.None;
+
+    [DataField]
+    public EntityWhitelist? Whitelist;
 }
 
 /// <summary>
@@ -29,6 +33,6 @@ public enum WearTrigger
     TileTool = 1 << 2,
     Learn = 1 << 3,
     RCD = 1 << 4,
-
-    All = MeleeHit | Interact | TileTool | Learn | RCD
+    Key = 1 << 5,
+    KeyDuplicator = 1 << 6,
 }

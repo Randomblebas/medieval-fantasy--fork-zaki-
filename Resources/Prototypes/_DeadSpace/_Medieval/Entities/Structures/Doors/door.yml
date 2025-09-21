@@ -1,0 +1,100 @@
+- type: entity
+  id: MedievalWoodDoor
+  name: деревянная дверь
+  parent: MedievalBaseLockableDoor
+
+- type: entity
+  id: MedievalWoodDurableDoor
+  name: крепкая деревянная дверь
+  parent: MedievalBaseLockableDoor
+  components:
+  - type: Sprite
+    sprite: _DeadSpace/_Medieval/Structures/Doors/wood_durable_door.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  id: MedievalIronWoodDurableDoor
+  name: укреплённая деревянная дверь
+  parent: MedievalBaseLockableDoor
+  components:
+  - type: Sprite
+    sprite: _DeadSpace/_Medieval/Structures/Doors/iron_wood_durable_door.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 3000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  id: MedievalWoodDoorFrame
+  name: деревянное раздвижное окно
+  parent: MedievalBaseLockableDoor
+  components:
+  - type: Sprite
+    sprite: _DeadSpace/_Medieval/Structures/Doors/wood_door_frame.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  id: MedievalStone
+  name: каменная дверь
+  parent: MedievalBaseLockableDoor
+  components:
+  - type: Sprite
+    sprite: _DeadSpace/_Medieval/Structures/Doors/stone_durable_door.rsi
+  - type: Damageable
+    damageContainer: MedievalInorganic
+    damageModifierSet: MedievalStone
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 3000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Door
+    openSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+    closeSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+
+- type: entity
+  id: MedievalStoneDoor
+  name: железная дверь
+  parent: MedievalBaseLockableDoor
+  components:
+  - type: Sprite
+    sprite: _DeadSpace/_Medieval/Structures/Doors/iron_door.rsi
+  - type: Damageable
+    damageContainer: MedievalInorganic
+    damageModifierSet: MedievalIron
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Door
+    openSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+    closeSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg

@@ -55,6 +55,14 @@
   spawn: MedievalFloorTileItemAsh
   maxCount: 15
 
+# Камень
+
+- type: stack
+  id: MedievalFloorTileStone
+  name: stack-floor-tile-stone
+  spawn: MedievalFloorTileItemStone
+  maxCount: 15
+
 # Дерево
 
 - type: stack

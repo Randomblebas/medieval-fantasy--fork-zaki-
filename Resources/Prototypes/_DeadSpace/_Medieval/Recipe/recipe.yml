@@ -263,6 +263,27 @@
     MedievalProcessedIron: 100
     MedievalProcessedWood: 100
 
+- type: latheRecipe
+  parent: MedievalBaseToolsRecipe
+  id: MedievalKeyRecipe
+  result: MedievalKey
+  materials:
+    MedievalProcessedIron: 10
+
+- type: latheRecipe
+  parent: MedievalBaseToolsRecipe
+  id: MedievalBaseLockpickRecipe
+  result: MedievalLockpick
+  materials:
+    MedievalProcessedIron: 10
+
+- type: latheRecipe
+  parent: MedievalBaseToolsRecipe
+  id: MedievalLockRecipe
+  result: MedievalLock
+  materials:
+    MedievalProcessedIron: 50
+
 # Каменоломня
 
 - type: latheRecipe
