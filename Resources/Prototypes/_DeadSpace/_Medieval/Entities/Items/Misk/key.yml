@@ -9,6 +9,9 @@
   - type: Sprite
     sprite: _DeadSpace/_Medieval/Objects/Items/key.rsi
     state: key1
+  - type: Tag
+    tags:
+    - MedievalKey
   - type: Item
     size: Small
     sprite: _DeadSpace/_Medieval/Objects/Items/key.rsi
@@ -91,3 +94,71 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+
+
+- type: entity
+  parent: BaseItem
+  id: MedievalBunch
+  name: связка ключей
+  components:
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _DeadSpace/_Medieval/Objects/Items/key.rsi
+    state: bunch1
+  - type: Item
+    size: Small
+    sprite: _DeadSpace/_Medieval/Objects/Items/key.rsi
+  - type: MedievalKeyDuplicator
+  - type: Damageable
+    damageContainer: MedievalInorganic
+    damageModifierSet: MedievalIron
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,1,5
+    whitelist:
+      tags:
+        - MedievalKey
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:EmptyContainersBehaviour
+        containers:
+        - storagebase
+  - type: ItemMapper
+    mapLayers:
+      bunch1:
+        whitelist:
+          tags: [ MedievalKey ]
+        minCount: 0
+      bunch2:
+        whitelist:
+          tags: [ MedievalKey ]
+        minCount: 1
+      bunch3:
+        whitelist:
+          tags: [ MedievalKey ]
+        minCount: 2
+      bunch4:
+        whitelist:
+          tags: [ MedievalKey ]
+        minCount: 3
+      bunch5:
+        whitelist:
+          tags: [ MedievalKey ]
+        minCount: 4
+      bunch6:
+        whitelist:
+          tags: [ MedievalKey ]
+        minCount: 5
+    sprite: _DeadSpace/_Medieval/Objects/Items/key.rsi
+  - type: Appearance

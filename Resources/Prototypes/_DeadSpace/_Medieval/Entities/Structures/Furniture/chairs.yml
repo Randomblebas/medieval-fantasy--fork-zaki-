@@ -1,0 +1,110 @@
+- type: entity
+  name: деревянный стул
+  id: MedievalBaseChair
+  parent: UnanchoredChairBase
+  suffix: Средневековье
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _DeadSpace/_Medieval/Structures/Furniture/chairs.rsi
+    state: chair1
+  - type: Damageable
+    damageContainer: MedievalInorganic
+    damageModifierSet: MedievalWood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Tag
+    tags:
+    - Wooden
+
+- type: entity
+  parent: MedievalBaseChair
+  id: MedievalChairGreenCushion
+  name: деревянный стул с зелёной подушкой
+  description: Уютный стул, обитый простой зелёной тканью. На нём удобно сидеть у очага после долгого дня.
+  components:
+  - type: Sprite
+  - type: PhysicalComposition # нужно rcd 3
+    materialComposition:
+      MedievalProcessedWood: 10
+      MedievalProcessedStone: 20
+      MedievalProcessedIron: 10
+
+- type: entity
+  parent: MedievalBaseChair
+  id: MedievalChairPurpleLuxury
+  name: роскошный фиолетовый деревянный стул
+  description: Богато украшенный стул с подушкой глубокого фиолетового цвета. На таком удобно заседать в совете.
+  components:
+  - type: Sprite
+    state: chair2
+  - type: PhysicalComposition # нужно rcd 6
+    materialComposition:
+      MedievalProcessedWood: 20
+      MedievalProcessedStone: 40
+      MedievalProcessedIron: 20
+
+- type: entity
+  parent: MedievalBaseChair
+  id: MedievalChairEmeraldLuxury
+  name: роскошный изумрудный деревянный стул
+  description: Массивный стул с изумрудной подушкой. Символ статуса и вкуса для знатного вельможи.
+  components:
+  - type: Sprite
+    state: chair3
+  - type: PhysicalComposition # нужно rcd 6
+    materialComposition:
+      MedievalProcessedWood: 20
+      MedievalProcessedStone: 40
+      MedievalProcessedIron: 20
+
+- type: entity
+  parent: MedievalBaseChair
+  id: MedievalChairRedCushion
+  name: деревянный стул с красной подушкой
+  description: Простой, но изящный стул. Красная ткань добавляет немного тепла и уюта.
+  components:
+  - type: Sprite
+    state: chair4
+  - type: PhysicalComposition # нужно rcd 3
+    materialComposition:
+      MedievalProcessedWood: 10
+      MedievalProcessedStone: 20
+      MedievalProcessedIron: 10
+
+- type: entity
+  parent: MedievalBaseChair
+  id: MedievalChairPlain
+  name: деревянный стул
+  description: Обычный стул без излишеств. Сидеть можно, жаловаться не стоит.
+  components:
+  - type: Sprite
+    state: chair5
+  - type: PhysicalComposition # нужно rcd 3
+    materialComposition:
+      MedievalProcessedWood: 10
+      MedievalProcessedStone: 20
+      MedievalProcessedIron: 10
+
+- type: entity
+  parent: MedievalBaseChair
+  id: MedievalStool
+  name: деревянный табурет
+  description: Низкий табурет без спинки. Удобен для короткого отдыха или работы в мастерской.
+  components:
+  - type: Sprite
+    state: chair6
+  - type: PhysicalComposition # нужно rcd 1
+    materialComposition:
+      MedievalProcessedWood: 3
+      MedievalProcessedStone: 7
+      MedievalProcessedIron: 3

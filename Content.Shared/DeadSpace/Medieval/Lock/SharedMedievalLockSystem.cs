@@ -2,6 +2,7 @@
 
 using Content.Shared.DeadSpace.Medieval.Lock.Components;
 using Content.Shared.Doors;
+using Content.Shared.Storage.Components;
 using Robust.Shared.Containers;
 
 namespace Content.Shared.DeadSpace.Medieval.Lock;
@@ -14,20 +15,33 @@ public abstract partial class SharedMedievalLockSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<MedievalLockableComponent, BeforeDoorOpenedEvent>(OnBeforeDoorOpened);
+        SubscribeLocalEvent<MedievalLockableComponent, StorageOpenAttemptEvent>(OnStorageOpenAttempt);
     }
 
     private void OnBeforeDoorOpened(EntityUid uid, MedievalLockableComponent component, BeforeDoorOpenedEvent args)
     {
+        if (!CanUnlock(uid, out _))
+            args.Cancel();
+    }
 
-        if (!TryComp<MedievalLockComponent>(uid, out var lockComp))
-        {
-            var lockEnt = GetLock(uid);
+    private void OnStorageOpenAttempt(EntityUid uid, MedievalLockableComponent component, ref StorageOpenAttemptEvent args)
+    {
+        if (!CanUnlock(uid, out _))
+            args.Cancelled = true;
+    }
 
-            if (lockEnt != null && TryComp<MedievalLockComponent>(lockEnt, out lockComp) && !lockComp.Locked)
-                return;
-        }
+    private bool CanUnlock(EntityUid uid, out MedievalLockComponent? lockComp)
+    {
+        lockComp = null;
 
-        args.Cancel();
+        if (TryComp<MedievalLockComponent>(uid, out lockComp))
+            return !lockComp.Locked;
+
+        var lockEnt = GetLock(uid);
+        if (lockEnt != null && TryComp<MedievalLockComponent>(lockEnt, out lockComp))
+            return !lockComp.Locked;
+
+        return false;
     }
 
     public bool IsLocked(EntityUid uid, MedievalLockComponent? component = null)

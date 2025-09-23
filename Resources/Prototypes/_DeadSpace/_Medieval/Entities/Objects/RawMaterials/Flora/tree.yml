@@ -2,13 +2,24 @@
 
 - type: entity
   parent: MedievalBaseTree
-  id: BaseTreeLargeMedieval
-  abstract: true
+  id: MedievalTreeLarge
   name: большое дерево
   components:
   - type: Sprite
     sprite: Objects/Decoration/Flora/flora_treeslarge.rsi
+    layers:
+    - state: treelarge01
+      map: ["random"]
     offset: 0,1.55
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+        treelarge02: ""
+        treelarge03: ""
+        treelarge04: ""
+        treelarge05: ""
+        treelarge06: ""
   - type: Fixtures
     fixtures:
       fix1:
@@ -40,7 +51,7 @@
 
 - type: entity
   parent: MedievalBaseTree
-  id: FloraTreeMedieval
+  id: MedievalTree
   name: дерево
   components:
   - type: Sprite

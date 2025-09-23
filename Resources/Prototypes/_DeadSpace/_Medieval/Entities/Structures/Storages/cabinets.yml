@@ -1,0 +1,125 @@
+- type: entity
+  parent: [ BaseStructureDynamic, BaseBagOpenClose ]
+  id: MedievalBaseFilingCabinet
+  name: Шкаф
+  description: Шкаф для хранения всех ваших предметов.
+  suffix: Средневековье, пустой
+  abstract: true
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,3
+    maxItemSize: Normal
+  - type: Sprite
+    sprite: _DeadSpace/_Medieval/Structures/Storages/cabinets.rsi
+    noRot: true
+  - type: Appearance
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.18,-0.48,0.18,0.48"
+        density: 200
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: InteractionOutline
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+  - type: Damageable
+    damageContainer: MedievalInorganic
+    damageModifierSet: MedievalWood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: MedievalBaseFilingCabinet
+  id: MedievalFilingCabinet1
+  components:
+  - type: Storage
+    maxItemSize: Small
+  - type: Sprite
+    state: cabinet1
+    layers:
+    - state: cabinet1
+    - state: cabinet1-open
+      map: ["openLayer"]
+  - type: PhysicalComposition # нужно rcd 3
+    materialComposition:
+      MedievalProcessedWood: 10
+      MedievalProcessedStone: 20
+      MedievalProcessedIron: 10
+
+- type: entity
+  parent: MedievalBaseFilingCabinet
+  id: MedievalFilingCabinet2
+  components:
+  - type: Sprite
+    state: cabinet2
+    layers:
+    - state: cabinet2
+    - state: cabinet2-open
+      map: ["openLayer"]
+  - type: PhysicalComposition # нужно rcd 6
+    materialComposition:
+      MedievalProcessedWood: 20
+      MedievalProcessedStone: 40
+      MedievalProcessedIron: 20
+
+- type: entity
+  parent: MedievalBaseFilingCabinet
+  id: MedievalFilingCabinet3
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,9
+    maxItemSize: Normal
+  - type: Sprite
+    state: cabinet3
+    layers:
+    - state: cabinet3
+    - state: cabinet3-open
+      map: ["openLayer"]
+  - type: PhysicalComposition # нужно rcd 3
+    materialComposition:
+      MedievalProcessedWood: 10
+      MedievalProcessedStone: 20
+      MedievalProcessedIron: 10
+
+- type: entity
+  parent: MedievalBaseFilingCabinet
+  id: MedievalFilingCabinet4
+  components:
+  - type: Storage
+    grid:
+    - 0,0,2,9
+    maxItemSize: Small
+  - type: Sprite
+    state: cabinet4
+    layers:
+    - state: cabinet4
+    - state: cabinet4-open
+      map: ["openLayer"]
+  - type: PhysicalComposition # нужно rcd 2
+    materialComposition:
+      MedievalProcessedWood: 7
+      MedievalProcessedStone: 14
+      MedievalProcessedIron: 7

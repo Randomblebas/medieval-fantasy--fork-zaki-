@@ -2543,7 +2543,8 @@ entities:
         allowedTiles:
         - MedievalFloorGrass
         entities:
-        - FloraTreeMedieval
+        - MedievalTree
+        - MedievalTreeLarge
       - !type:BiomeTileLayer
         threshold: -1
         noise:
@@ -4788,7 +4789,7 @@ entities:
     - type: Transform
       pos: 11.5,-33.5
       parent: 1
-- proto: FloraTreeMedieval
+- proto: MedievalTree
   entities:
   - uid: 2
     components:

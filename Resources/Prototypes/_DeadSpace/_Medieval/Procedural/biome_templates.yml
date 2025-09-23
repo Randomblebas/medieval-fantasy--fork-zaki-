@@ -75,7 +75,8 @@
       allowedTiles:
         - MedievalFloorGrass
       entities:
-        - FloraTreeMedieval
+        - MedievalTree
+        - MedievalTreeLarge
     # Плитки
     - !type:BiomeTileLayer
       threshold: -1.0

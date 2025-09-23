@@ -38,7 +38,7 @@
   - type: Wear
   - type: Damageable
     damageContainer: MedievalClothing
-    damageModifierSet: MedievalFlaxClothing
+    damageModifierSet: MedievalFlax
   - type: Destructible
     thresholds:
     - trigger:
