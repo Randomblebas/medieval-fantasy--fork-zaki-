@@ -52,7 +52,7 @@
         acts: ["Destruction"]
 
 - type: entity
-  id: MedievalStone
+  id: MedievalStoneDoor
   name: каменная дверь
   parent: MedievalBaseLockableDoor
   components:
@@ -76,7 +76,7 @@
       path: /Audio/Effects/stonedoor_openclose.ogg
 
 - type: entity
-  id: MedievalStoneDoor
+  id: MedievalIronDoor
   name: железная дверь
   parent: MedievalBaseLockableDoor
   components:

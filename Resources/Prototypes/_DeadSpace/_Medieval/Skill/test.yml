@@ -45,7 +45,7 @@
         Structural: 5
   - type: Wear
   - type: Damageable
-    damageContainer: MedievalMachine
+    damageContainer: MedievalInorganic
     damageModifierSet: MedievalLathe
   - type: Destructible
     thresholds:

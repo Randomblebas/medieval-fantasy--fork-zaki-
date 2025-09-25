@@ -284,6 +284,29 @@
   materials:
     MedievalProcessedIron: 50
 
+- type: latheRecipe
+  parent: MedievalBaseToolsRecipe
+  id: MedievalBunchRecipe
+  result: MedievalBunch
+  materials:
+    MedievalProcessedIron: 10
+
+- type: latheRecipe
+  parent: MedievalBaseToolsRecipe
+  id: MedievalKeyDuplicatorRecipe
+  result: MedievalKeyDuplicator
+  materials:
+    MedievalProcessedIron: 50
+
+- type: latheRecipe
+  parent: MedievalMaterialProcessingRecipe
+  id: MedievaHammerAmmoRecipe
+  result: MedievaConstructionToolsAmmo
+  materials:
+    MedievalProcessedWood: 100
+    MedievalProcessedStone: 200
+    MedievalProcessedIron: 100
+
 # Каменоломня
 
 - type: latheRecipe
@@ -295,11 +318,4 @@
 
 # Общее
 
-- type: latheRecipe
-  parent: MedievalMaterialProcessingRecipe
-  id: MedievaHammerAmmoRecipe
-  result: MedievaConstructionToolsAmmo
-  materials:
-    MedievalProcessedWood: 100
-    MedievalProcessedStone: 200
-    MedievalProcessedIron: 100
+

@@ -41,6 +41,22 @@
     - MedievalFenceWoodSmallCorner
     - MedievalFenceWoodSmallTJunction
     - MedievalFenceWoodSmallGate
+    - MedievalFilingCabinet1
+    - MedievalFilingCabinet2
+    - MedievalFilingCabinet3
+    - MedievalFilingCabinet4
+    - MedievalIronDoor
+    - MedievalStoneDoor
+    - MedievalWoodDoorFrame
+    - MedievalIronWoodDurableDoor
+    - MedievalWoodDurableDoor
+    - MedievalWoodDoor
+    - MedievalStool
+    - MedievalChairPlain
+    - MedievalChairRedCushion
+    - MedievalChairEmeraldLuxury
+    - MedievalChairPurpleLuxury
+    - MedievalChairGreenCushion
   - type: LimitedCharges
     maxCharges: 30
     lastCharges: -1

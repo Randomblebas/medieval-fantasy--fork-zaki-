@@ -94,6 +94,9 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedIron: 50
 
 
 - type: entity
@@ -112,7 +115,6 @@
   - type: Item
     size: Small
     sprite: _DeadSpace/_Medieval/Objects/Items/key.rsi
-  - type: MedievalKeyDuplicator
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron
@@ -162,3 +164,6 @@
         minCount: 5
     sprite: _DeadSpace/_Medieval/Objects/Items/key.rsi
   - type: Appearance
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalProcessedIron: 10

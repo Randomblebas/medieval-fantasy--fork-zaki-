@@ -44,7 +44,6 @@
   - MedievalGoldIngotRecipe
   - MedievalMithrilIngotRecipe
   - MedievalAdamantineIngotRecipe
-  - MedievalLockRecipe
 
 - type: latheRecipePack
   id: MedievalAnvil
@@ -54,3 +53,7 @@
   - MedievalConstructionToolsRecipe
   - MedievalBaseLockpickRecipe
   - MedievalKeyRecipe
+  - MedievalLockRecipe
+  - MedievalConstructionToolsRecipe
+  - MedievalBunchRecipe
+  - MedievalKeyDuplicatorRecipe

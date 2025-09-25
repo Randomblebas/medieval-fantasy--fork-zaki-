@@ -20,6 +20,7 @@ public sealed class RCDMenuBoundUserInterface : BoundUserInterface
         = new Dictionary<string, (string Tooltip, SpriteSpecifier Sprite)>
         {
             ["Straight"] = ("rcd-component-straight", new SpriteSpecifier.Texture(new ResPath("/Textures/Structures/Walls/wooden_fence.rsi/straight.png"))), // DS14-Medieval
+            ["Furniture"] = ("rcd-component-furniture", new SpriteSpecifier.Texture(new ResPath("/Textures/_DeadSpace/_Medieval/Structures/Storages/cabinets.rsi/cabinet1.png"))), // DS14-Medieval
             ["WallsAndFlooring"] = ("rcd-component-walls-and-flooring", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/walls_and_flooring.png"))),
             ["WindowsAndGrilles"] = ("rcd-component-windows-and-grilles", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/windows_and_grilles.png"))),
             ["Airlocks"] = ("rcd-component-airlocks", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/airlocks.png"))),
