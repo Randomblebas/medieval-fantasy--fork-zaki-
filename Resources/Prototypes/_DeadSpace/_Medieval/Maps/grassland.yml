@@ -1,0 +1,17 @@
+- type: gameMap
+  id: MedievalVerdantVale
+  mapName: 'VerdantVale'
+  mapPath: /Maps/medieval_verdant_vale.yml
+  minPlayers: 0
+  stations:
+    VerdantVale:
+      stationProto: MedievalStandardTerritory
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} VerdantVale {1}'
+        # - type: StationEmergencyShuttle
+        #   emergencyShuttlePath: /Maps/Shuttles/emergency_amber.yml
+        - type: StationJobs
+          availableJobs:
+            Passenger: [ -1, -1 ]
+
