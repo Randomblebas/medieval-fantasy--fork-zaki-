@@ -16,6 +16,74 @@
   heatCapacity: 10000
   weather: true
 
+- type: tile
+  id: MedievalCaveDrought
+  name: tiles-cave-drought
+  sprite: /Textures/Tiles/cavedrought.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: MedievalDirt
+  isSubfloor: false
+  deconstructTools: [ MedievalDigging ]
+  footstepSounds:
+    collection: FootstepAsteroid
+  # itemDrop:
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorWasteland
+  name: tiles-wasteland
+  sprite: /Textures/_DeadSpace/Tiles/Wasteland/wasteland.png
+  variants: 12
+  placementVariants:
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+  baseTurf: MedievalDirt
+  isSubfloor: false
+  deconstructTools: [ MedievalDigging ]
+  footstepSounds:
+    collection: FootstepAsteroid
+  # itemDrop:
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorPlanetDirt
+  name: tiles-dirt-planet-floor
+  sprite: /Textures/Tiles/Planet/dirt.rsi/dirt.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: MedievalDirt
+  isSubfloor: false
+  deconstructTools: [ MedievalDigging ]
+  footstepSounds:
+    collection: FootstepAsteroid
+  # itemDrop:
+  heatCapacity: 10000
+  weather: true
+  indestructible: true
+
 # Травушка
 
 - type: tile
@@ -257,6 +325,28 @@
 
 - type: tile
   id: MedievalFloorStone2
+  name: tiles-cave
+  sprite: /Textures/Tiles/cave.png
+  variants: 7
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: MedievalDirt
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 10000
+  weather: true
+  deconstructTools: [ MedievalSwotting ]
+  itemDrop: MedievalStoneOre1
+
+- type: tile
+  id: MedievalFloorStone3
   name: tiles-stone-tile
   sprite: /Textures/_DeadSpace/Tiles/Moon/moon.png
   variants: 13

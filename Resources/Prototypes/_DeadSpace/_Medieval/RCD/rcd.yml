@@ -397,3 +397,59 @@
   rules:
     - IsWindow
   fx: EffectRCDConstruct2
+
+- type: rcd
+  id: MedievalComfortableBed
+  category: Furniture
+  sprite: /Textures/_DeadSpace/_Medieval/Structures/Furniture/bed.rsi/bed.png
+  mode: ConstructObject
+  prototype: MedievalComfortableBed
+  cost: 10
+  delay: 2
+  collisionMask: Impassable
+  rotation: Fixed
+  rules:
+    - IsWindow
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: MedievalBed
+  category: Furniture
+  sprite: /Textures/_DeadSpace/_Medieval/Structures/Furniture/bed.rsi/bed2.png
+  mode: ConstructObject
+  prototype: MedievalBed
+  cost: 5
+  delay: 2
+  collisionMask: Impassable
+  rotation: Fixed
+  rules:
+    - IsWindow
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: MedievalClothHeyBed
+  category: Furniture
+  sprite: /Textures/_DeadSpace/_Medieval/Structures/Furniture/bed.rsi/bed3.png
+  mode: ConstructObject
+  prototype: MedievalClothHeyBed
+  cost: 3
+  delay: 2
+  collisionMask: Impassable
+  rotation: Fixed
+  rules:
+    - IsWindow
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: MedievalHeyBed
+  category: Furniture
+  sprite: /Textures/_DeadSpace/_Medieval/Structures/Furniture/bed.rsi/bed4.png
+  mode: ConstructObject
+  prototype: MedievalHeyBed
+  cost: 1
+  delay: 2
+  collisionMask: Impassable
+  rotation: Fixed
+  rules:
+    - IsWindow
+  fx: EffectRCDConstruct2
