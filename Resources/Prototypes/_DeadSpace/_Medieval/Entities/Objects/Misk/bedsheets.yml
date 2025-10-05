@@ -53,4 +53,4 @@
     state: blanket3
   - type: PhysicalComposition
     materialComposition:
-      MedievalLinenCloth: 50
+      MedievalCloth: 50
