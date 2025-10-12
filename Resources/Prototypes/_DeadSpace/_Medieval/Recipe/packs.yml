@@ -34,7 +34,6 @@
   - MedievalFloorTileItemWoodChessRecipe
   - MedievalFloorTileItemWoodLargeRecipe
 
-
 - type: latheRecipePack
   id: MedievalSmelter
   recipes:
@@ -57,6 +56,86 @@
   - MedievalConstructionToolsRecipe
   - MedievalBunchRecipe
   - MedievalKeyDuplicatorRecipe
+  - MedievalAdamantineWhipRecipe
+  - MedievalMithrilWhipRecipe
+  - MedievalSilverWhipRecipe
+  - MedievalSteelWhipRecipe
+  - MedievalWoodWhipRecipe
+  - MedievalIronWhipRecipe
+  - MedievalPeltWhip2Recipe
+  - MedievalPeltWhipRecipe
+  - MedievalAdamantineSword2Recipe
+  - MedievalMithrilSword2Recipe
+  - MedievalSilverSword2Recipe
+  - MedievalSteelSword2Recipe
+  - MedievalWoodSword2Recipe
+  - MedievalIronSword2Recipe
+  - MedievalAdamantineSwordRecipe
+  - MedievalMithrilSwordRecipe
+  - MedievalSilverSwordRecipe
+  - MedievalSteelSwordRecipe
+  - MedievalWoodSwordRecipe
+  - MedievalIronSwordRecipe
+  - MedievalAdamantineSpearRecipe
+  - MedievalMithrilSpearRecipe
+  - MedievalSilverSpearRecipe
+  - MedievalSteelSpearRecipe
+  - MedievalWoodSpearRecipe
+  - MedievalIronSpearRecipe
+  - MedievalAdamantinePolearmRecipe
+  - MedievalMithrilPolearmRecipe
+  - MedievalSilverPolearmRecipe
+  - MedievalSteelPolearmRecipe
+  - MedievalWoodPolearmRecipe
+  - MedievalIronPolearmRecipe
+  - MedievalAdamantineMaceRecipe
+  - MedievalMithrilMaceRecipe
+  - MedievalSilverMaceRecipe
+  - MedievalSteelMaceRecipe
+  - MedievalWoodMaceRecipe
+  - MedievalIronMaceRecipe
+  - MedievalAdamantineKnifeRecipe
+  - MedievalMithrilKnifeRecipe
+  - MedievalSilverKnifeRecipe
+  - MedievalSteelKnifeRecipe
+  - MedievalWoodKnifeRecipe
+  - MedievalIronKnifeRecipe
+  - MedievalAdamantineHideDaggerRecipe
+  - MedievalMithrilHideDaggerRecipe
+  - MedievalSilverHideDaggerRecipe
+  - MedievalSteelHideDaggerRecipe
+  - MedievalWoodHideDaggerRecipe
+  - MedievalIronHideDaggerRecipe
+  - MedievalAdamantineHalberdRecipe
+  - MedievalMithrilHalberdRecipe
+  - MedievalSilverHalberdRecipe
+  - MedievalSteelHalberdRecipe
+  - MedievalWoodHalberdRecipe
+  - MedievalIronHalberdRecipe
+  - MedievalAdamantineEveningstarRecipe
+  - MedievalMithrilEveningstarRecipe
+  - MedievalSilverEveningstarRecipe
+  - MedievalSteelEveningstarRecipe
+  - MedievalWoodEveningstarRecipe
+  - MedievalIronEveningstarRecipe
+  - MedievalAdamantineDaggerRecipe
+  - MedievalMithrilDaggerRecipe
+  - MedievalSilverDaggerRecipe
+  - MedievalSteelDaggerRecipe
+  - MedievalWoodDaggerRecipe
+  - MedievalIronDaggerRecipe
+  - MedievalAdamantineCleaverRecipe
+  - MedievalMithrilCleaverRecipe
+  - MedievalSilverCleaverRecipe
+  - MedievalSteelCleaverRecipe
+  - MedievalWoodCleaverRecipe
+  - MedievalIronCleaverRecipe
+  - MedievalAdamantineBrassKnucklesRecipe
+  - MedievalMithrilBrassKnucklesRecipe
+  - MedievalSilverBrassKnucklesRecipe
+  - MedievalSteelBrassKnucklesRecipe
+  - MedievalWoodBrassKnucklesRecipe
+  - MedievalIronBrassKnucklesRecipe
 
 - type: latheRecipePack
   id: MedievalLoom

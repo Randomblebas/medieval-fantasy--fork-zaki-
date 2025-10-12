@@ -219,7 +219,7 @@
     selectedLanguage: GeneralLanguage
     knownLanguages:
     - GeneralLanguage
-  - type: DamageToClothing # DS14-Medieval
+  - type: DamageToClothing # Medieval
 
 - type: entity
   save: false

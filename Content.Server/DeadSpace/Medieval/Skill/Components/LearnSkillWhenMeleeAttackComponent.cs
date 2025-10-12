@@ -1,7 +1,8 @@
 // Мёртвый Космос, Licensed under custom terms with restrictions on public hosting and commercial use, full text: https://raw.githubusercontent.com/dead-space-server/space-station-14-fobos/master/LICENSE.TXT
 
+using Content.Shared.DeadSpace.Medieval.Skills.Prototypes;
 using Content.Shared.Whitelist;
-using Robust.Shared.Audio;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.DeadSpace.Medieval.Skill.Components;
 
@@ -11,8 +12,8 @@ public sealed partial class LearnSkillWhenMeleeAttackComponent : Component
     /// <summary>
     ///     Изучаемые навыки навыки
     /// </summary>
-    [DataField]
-    public List<string> Skills;
+    [DataField(required: true)]
+    public List<ProtoId<SkillPrototype>> Skills;
 
     /// <summary>
     ///     Количество даваемых очков при изучении

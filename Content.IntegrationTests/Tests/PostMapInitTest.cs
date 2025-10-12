@@ -116,7 +116,7 @@ namespace Content.IntegrationTests.Tests
             "Reach",
             "Saltern",
             "Train",
-            "MedievalVerdantVale", // DS14-Medieval
+            "MedievalVerdantVale", // Medieval
         };
 
         private static readonly string[] GameMapsExcludedFromTests =

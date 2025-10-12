@@ -20,7 +20,7 @@ public abstract class NeededSkillSystem : EntitySystem
         _sawmill = Logger.GetSawmill("NeededSkillSystem");
     }
 
-    public bool CheckRequiredSkills(EntityUid user, List<string> neededSkills)
+    public bool CheckRequiredSkills(EntityUid user, List<ProtoId<SkillPrototype>> neededSkills)
     {
         if (!TryComp<SkillComponent>(user, out var skillComponent))
             return true;
@@ -29,7 +29,7 @@ public abstract class NeededSkillSystem : EntitySystem
 
         foreach (var skill in neededSkills)
         {
-            if (!_prototypeManager.TryIndex<SkillPrototype>(skill, out var skillPrototype) || skillPrototype == null)
+            if (!_prototypeManager.TryIndex(skill, out var skillPrototype) || skillPrototype == null)
             {
                 _sawmill.Warning($"Прототип навыка {skill} не найден");
                 continue;

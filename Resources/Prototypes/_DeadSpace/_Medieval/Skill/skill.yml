@@ -29,3 +29,51 @@
   pointsNeeded: 100
   addLimit:
     craft: 1
+
+- type: skill
+  id: MedievalOneSword
+  name: одноручный клинок
+  description: Бой
+  pointsNeeded: 100
+  addLimit:
+    war: 1
+
+- type: skill
+  id: MedievalDagger
+  name: кинжал
+  description: Бой
+  pointsNeeded: 100
+  addLimit:
+    war: 1
+
+- type: skill
+  id: MedievalMace
+  name: булова / дубина
+  description: Бой
+  pointsNeeded: 100
+  addLimit:
+    war: 1
+
+- type: skill
+  id: MedievalFistFight
+  name: кулачный бой
+  description: Бой
+  pointsNeeded: 100
+  addLimit:
+    fist: 1
+
+- type: skill
+  id: MedievalWhip
+  name: плеть
+  description: Бой
+  pointsNeeded: 100
+  addLimit:
+    fist: 1
+
+- type: skill
+  id: MedievalAncientWeapons
+  name: древкое оружие
+  description: Бой
+  pointsNeeded: 100
+  addLimit:
+    fist: 1

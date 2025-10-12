@@ -17,3 +17,7 @@
 - type: latheCategory
   id: MedievalDetailsCategory
   name: lathe-medieval-category-details
+
+- type: latheCategory
+  id: MedievalWeaponCategory
+  name: lathe-medieval-category-weapon

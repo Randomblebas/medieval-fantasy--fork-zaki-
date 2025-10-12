@@ -73,6 +73,14 @@ public sealed class ItemSystem : SharedItemSystem
                 i++;
             }
 
+            // Твари, сразу нельзя так сделать?
+            // Medieval-Start
+            layer.State = (item.HeldPrefix == null) ? defaultKey : $"{item.HeldPrefix}-{defaultKey}";
+            if (!string.IsNullOrEmpty(item.HeldPrefix))
+                key = $"{item.HeldPrefix}-{key}";
+            // Medieval-End
+
+            Log.Warning(key);
             args.Layers.Add((key, layer));
         }
     }
@@ -97,9 +105,7 @@ public sealed class ItemSystem : SharedItemSystem
         if (rsi == null)
             return false;
 
-        var state = (item.HeldPrefix == null)
-            ? defaultKey
-            : $"{item.HeldPrefix}-{defaultKey}";
+        var state = defaultKey; // Medieval
 
         if (!rsi.TryGetState(state, out var _))
             return false;

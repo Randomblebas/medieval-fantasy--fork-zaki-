@@ -4,7 +4,6 @@ using Content.Shared.DeadSpace.Medieval.Lock;
 using Content.Server.DeadSpace.Medieval.Lock.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
-using Robust.Shared.Random;
 using Content.Shared.DeadSpace.Medieval.Lock.Events;
 using Robust.Server.Audio;
 using Content.Shared.Popups;
@@ -14,7 +13,6 @@ using Content.Shared.Hands.Components;
 using Robust.Shared.Utility;
 using Content.Shared.Database;
 using Content.Shared.DeadSpace.Medieval.Lock.Components;
-using NetCord.Gateway;
 
 namespace Content.Server.DeadSpace.Medieval.Lock;
 
