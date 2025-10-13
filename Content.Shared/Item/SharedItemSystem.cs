@@ -10,6 +10,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Shared.Humanoid;
 
 namespace Content.Shared.Item;
 
@@ -83,6 +84,7 @@ public abstract class SharedItemSystem : EntitySystem
             return;
 
         component.HeldPrefix = heldPrefix;
+
         Dirty(uid, component);
         VisualsChanged(uid);
     }
@@ -111,6 +113,8 @@ public abstract class SharedItemSystem : EntitySystem
             return;
 
         args.Handled = _handsSystem.TryPickup(args.User, uid, null, animateUser: false);
+        component.User = args.User; // Medieval
+        Dirty(uid, component); // Medieval
     }
 
     private void AddPickupVerb(EntityUid uid, ItemComponent component, GetVerbsEvent<InteractionVerb> args)
@@ -123,8 +127,13 @@ public abstract class SharedItemSystem : EntitySystem
             return;
 
         InteractionVerb verb = new();
-        verb.Act = () => _handsSystem.TryPickupAnyHand(args.User, args.Target, checkActionBlocker: false,
+        verb.Act = () =>
+        {
+            _handsSystem.TryPickupAnyHand(args.User, args.Target, checkActionBlocker: false,
             handsComp: args.Hands, item: component);
+            component.User = args.User; // Medieval
+            Dirty(uid, component); // Medieval
+        };
         verb.Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/pickup.svg.192dpi.png"));
 
         // if the item already in a container (that is not the same as the user's), then change the text.

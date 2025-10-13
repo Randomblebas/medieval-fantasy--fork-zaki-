@@ -15,6 +15,10 @@
     damage:
       groups:
         Brute: 11
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 22
   - type: Item
     inhandVisuals:
       left:
@@ -57,6 +61,10 @@
     damage:
       types:
         Blunt: 2.25
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 5.5
   - type: Item
     inhandVisuals:
       left:
@@ -96,6 +104,10 @@
     damage:
       groups:
         Brute: 14.75
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 27.5
   - type: Item
     inhandVisuals:
       left:
@@ -137,6 +149,12 @@
         Brute: 11
       types:
         Holy: 11
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 22
+      types:
+        Holy: 22
   - type: Item
     inhandVisuals:
       left:
@@ -176,6 +194,10 @@
     damage:
       groups:
         Brute: 16.5
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 33
   - type: Item
     inhandVisuals:
       left:
@@ -215,6 +237,10 @@
     damage:
       groups:
         Brute: 18
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 38.5
   - type: Item
     inhandVisuals:
       left:

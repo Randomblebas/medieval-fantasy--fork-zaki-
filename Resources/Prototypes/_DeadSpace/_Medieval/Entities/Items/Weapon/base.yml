@@ -31,8 +31,11 @@
     skills:
     - MedievalOneSword
   - type: LearnSkillWhenMeleeAttack
-    skills:
-    - MedievalOneSword
+    whitelist:
+      components:
+      - MobState
+    points:
+    - MedievalOneSword: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron
@@ -84,8 +87,11 @@
     skills:
     - MedievalDagger
   - type: LearnSkillWhenMeleeAttack
-    skills:
-    - MedievalDagger
+    whitelist:
+      components:
+      - MobState
+    points:
+    - MedievalDagger: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron
@@ -137,8 +143,11 @@
     skills:
     - MedievalOneSword
   - type: LearnSkillWhenMeleeAttack
-    skills:
-    - MedievalOneSword
+    whitelist:
+      components:
+      - MobState
+    points:
+    - MedievalOneSword: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron
@@ -185,8 +194,11 @@
     skills:
     - MedievalFistFight
   - type: LearnSkillWhenMeleeAttack
-    skills:
-    - MedievalFistFight
+    whitelist:
+      components:
+      - MobState
+    points:
+    - MedievalFistFight: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron
@@ -231,8 +243,11 @@
     skills:
     - MedievalMace
   - type: LearnSkillWhenMeleeAttack
-    skills:
-    - MedievalMace
+    whitelist:
+      components:
+      - MobState
+    points:
+    - MedievalMace: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron
@@ -281,8 +296,11 @@
     skills:
     - MedievalMace
   - type: LearnSkillWhenMeleeAttack
-    skills:
-    - MedievalMace
+    whitelist:
+      components:
+      - MobState
+    points:
+    - MedievalMace: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron
@@ -338,8 +356,11 @@
     skills:
     - MedievalAncientWeapons
   - type: LearnSkillWhenMeleeAttack
-    skills:
-    - MedievalAncientWeapons
+    whitelist:
+      components:
+      - MobState
+    points:
+    - MedievalAncientWeapons: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron
@@ -392,13 +413,17 @@
       scale: 0.5, 0.5
       map: [ base ]
   - type: Item
+    unisex: false
     size: Ginormous
   - type: MeleeSkill
     skills:
     - MedievalAncientWeapons
   - type: LearnSkillWhenMeleeAttack
-    skills:
-    - MedievalAncientWeapons
+    whitelist:
+      components:
+      - MobState
+    points:
+    - MedievalAncientWeapons: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron
@@ -449,13 +474,17 @@
     - state: handle
       map: [ base ]
   - type: Item
+    unisex: false
     size: Ginormous
   - type: MeleeSkill
     skills:
     - MedievalSpear
   - type: LearnSkillWhenMeleeAttack
-    skills:
-    - MedievalSpear
+    whitelist:
+      components:
+      - MobState
+    points:
+    - MedievalSpear: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron
@@ -506,8 +535,11 @@
     skills:
     - MedievalWhip
   - type: LearnSkillWhenMeleeAttack
-    skills:
-    - MedievalWhip
+    whitelist:
+      components:
+      - MobState
+    points:
+    - MedievalWhip: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron

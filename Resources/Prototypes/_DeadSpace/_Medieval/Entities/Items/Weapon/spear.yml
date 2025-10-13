@@ -9,12 +9,16 @@
     - state: blade
       color: "#8A8A8A"
       map: [ blade ]
-    - state: handle ь
+    - state: handle
       map: [ handle ]
   - type: MeleeWeapon
     damage:
       groups:
         Brute: 10
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 20
   - type: Item
     inhandVisuals:
       left:
@@ -57,6 +61,10 @@
     damage:
       types:
         Blunt: 2.5
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 5
   - type: Item
     inhandVisuals:
       left:
@@ -80,7 +88,6 @@
     materialComposition:
       MedievalProcessedWood: 300
 
-
 - type: entity
   parent: MedievalBaseSpear
   id: MedievalSteelSpear
@@ -96,6 +103,10 @@
     damage:
       groups:
         Brute: 12.5
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 25
   - type: Item
     inhandVisuals:
       left:
@@ -137,6 +148,12 @@
         Brute: 10
       types:
         Holy: 10
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 20
+      types:
+        Holy: 20
   - type: Item
     inhandVisuals:
       left:
@@ -176,13 +193,19 @@
     damage:
       groups:
         Brute: 15
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 30
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
+        scale: 0.5, 0.5
         color: "#9370DB"
       right:
       - state: inhand-right
+        scale: 0.5, 0.5
         color: "#9370DB"
   - type: Damageable
     damageContainer: MedievalInorganic
@@ -215,6 +238,10 @@
     damage:
       groups:
         Brute: 12.5
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 35
   - type: Item
     inhandVisuals:
       left:

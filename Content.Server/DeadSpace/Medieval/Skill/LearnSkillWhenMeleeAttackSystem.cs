@@ -24,20 +24,29 @@ public sealed class LearnSkillWhenMeleeAttackSystem : EntitySystem
             if (args.User == entity)
                 continue;
 
-            if (component.Whitelist != null && _entityWhitelist.IsValid(component.Whitelist, entity))
+            if (component.Whitelist != null)
             {
-                foreach (var skill in component.Skills)
+                if (_entityWhitelist.IsValid(component.Whitelist, entity))
                 {
-                    if (_skillSystem.CanLearn(uid, skill))
-                        _skillSystem.AddSkillProgress(args.User, skill, component.Points[skill]);
+                    foreach (var skillDict in component.Points)
+                    {
+                        foreach (var (skill, value) in skillDict)
+                        {
+                            if (_skillSystem.CanLearn(args.User, skill))
+                                _skillSystem.AddSkillProgress(args.User, skill, value);
+                        }
+                    }
                 }
             }
             else
             {
-                foreach (var skill in component.Skills)
+                foreach (var skillDict in component.Points)
                 {
-                    if (_skillSystem.CanLearn(uid, skill))
-                        _skillSystem.AddSkillProgress(args.User, skill, component.Points[skill]);
+                    foreach (var (skill, value) in skillDict)
+                    {
+                        if (_skillSystem.CanLearn(args.User, skill))
+                            _skillSystem.AddSkillProgress(args.User, skill, value);
+                    }
                 }
             }
         }

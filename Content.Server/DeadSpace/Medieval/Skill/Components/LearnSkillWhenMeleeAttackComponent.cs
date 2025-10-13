@@ -10,16 +10,10 @@ namespace Content.Server.DeadSpace.Medieval.Skill.Components;
 public sealed partial class LearnSkillWhenMeleeAttackComponent : Component
 {
     /// <summary>
-    ///     Изучаемые навыки навыки
-    /// </summary>
-    [DataField(required: true)]
-    public List<ProtoId<SkillPrototype>> Skills;
-
-    /// <summary>
     ///     Количество даваемых очков при изучении
     /// </summary>
-    [DataField]
-    public Dictionary<string, float> Points { get; set; } = new Dictionary<string, float>();
+    [DataField(required: true)]
+    public List<Dictionary<ProtoId<SkillPrototype>, float>> Points { get; set; } = new();
 
     /// <summary>
     ///     Кого нужно бить чтобы навык прокачивался

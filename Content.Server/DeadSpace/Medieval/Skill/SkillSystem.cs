@@ -53,6 +53,17 @@ public sealed class SkillSystem : EntitySystem
         return component.Skills.TryGetValue(prototypeId, out var progress) && progress >= 1f;
     }
 
+    public float GetSkillProgress(EntityUid uid, string prototypeId, SkillComponent? component = null)
+    {
+        if (!Resolve(uid, ref component, false))
+            return 0f;
+
+        if (!component.Skills.TryGetValue(prototypeId, out var progress))
+            return 0f;
+
+        return progress;
+    }
+
     public bool CanLearn(EntityUid uid, string prototypeId, SkillComponent? component = null)
     {
         if (!Resolve(uid, ref component, false))

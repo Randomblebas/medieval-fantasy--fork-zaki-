@@ -21,13 +21,16 @@ public sealed class MeleeSkillSystem : EntitySystem
 
         foreach (var skill in component.Skills)
         {
-            if (_skillSystem.CnowThisSkill(args.User, skill))
-            {
-                if (component.DamageModifiers.TryGetValue(skill, out var modifier))
-                    bestModifier = Math.Max(bestModifier, modifier);
-            }
+            if (component.DamageModifiers.TryGetValue(skill, out var modifier))
+                bestModifier = Math.Max(bestModifier * _skillSystem.GetSkillProgress(args.User, skill), modifier * _skillSystem.GetSkillProgress(args.User, skill));
+            else
+                bestModifier = bestModifier * _skillSystem.GetSkillProgress(args.User, skill);
         }
 
-        args.BonusDamage = args.BaseDamage * bestModifier;
+        Console.WriteLine(bestModifier);
+        Console.WriteLine(args.BaseDamage);
+        Console.WriteLine(args.BaseDamage * bestModifier - args.BaseDamage);
+
+        args.BonusDamage = args.BaseDamage * bestModifier - args.BaseDamage;
     }
 }

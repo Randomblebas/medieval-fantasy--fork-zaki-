@@ -14,11 +14,27 @@
       "name": "handle"
     },
 	{
+      "name": "female-inhand-left",
+	  "directions": 4
+    },
+	{
+      "name": "female-inhand-right",
+	  "directions": 4
+    },
+	{
       "name": "inhand-left",
 	  "directions": 4
     },
 	{
       "name": "inhand-right",
+	  "directions": 4
+    },
+	{
+      "name": "male-inhand-left",
+	  "directions": 4
+    },
+	{
+      "name": "male-inhand-right",
 	  "directions": 4
     },
 	{

@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.Hands;
+using Content.Shared.Humanoid;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
 using Robust.Client.GameObjects;
@@ -63,6 +64,18 @@ public sealed class ItemSystem : SharedItemSystem
                 return;
         }
 
+        // Medieval-Start
+        Sex? sex = null;
+
+        if (item.User == null)
+            Log.Warning("User");
+
+        if (TryComp(item.User, out HumanoidAppearanceComponent? humAppearance))
+            sex = humAppearance.Sex;
+
+        sex = sex == Sex.Unsexed ? null : sex;
+        // Medieval-End
+
         var i = 0;
         foreach (var layer in layers)
         {
@@ -73,14 +86,23 @@ public sealed class ItemSystem : SharedItemSystem
                 i++;
             }
 
-            // Твари, сразу нельзя так сделать?
             // Medieval-Start
-            layer.State = (item.HeldPrefix == null) ? defaultKey : $"{item.HeldPrefix}-{defaultKey}";
+            var totalPrefix = (item.HeldPrefix == null) ? defaultKey : $"{item.HeldPrefix}-{defaultKey}";
+
             if (!string.IsNullOrEmpty(item.HeldPrefix))
                 key = $"{item.HeldPrefix}-{key}";
+
+            if (item.User is not null && !item.Unisex && sex != null)
+            {
+                var state = $"{sex.Value.ToString().ToLowerInvariant()}-{totalPrefix}";
+
+                if (HasInhandState(uid, item, state))
+                    totalPrefix = state;
+            }
+
+            layer.State = totalPrefix;
             // Medieval-End
 
-            Log.Warning(key);
             args.Layers.Add((key, layer));
         }
     }
@@ -118,5 +140,27 @@ public sealed class ItemSystem : SharedItemSystem
         result = new() { layer };
         return true;
     }
+
+    /// <remarks>
+    ///     Medieval
+    /// </remarks>
+    private bool HasInhandState(EntityUid uid, ItemComponent item, string state)
+    {
+        RSI? rsi = null;
+
+        if (item.RsiPath != null)
+            rsi = _resCache.GetResource<RSIResource>(SpriteSpecifierSerializer.TextureRoot / item.RsiPath).RSI;
+        else if (TryComp(uid, out SpriteComponent? sprite))
+            rsi = sprite.BaseRSI;
+
+        if (rsi == null)
+            return false;
+
+        if (rsi.TryGetState(state, out var _))
+            return true;
+
+        return false;
+    }
+
     #endregion
 }

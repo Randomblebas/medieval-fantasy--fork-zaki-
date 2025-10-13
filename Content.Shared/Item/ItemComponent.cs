@@ -28,6 +28,13 @@ public sealed partial class ItemComponent : Component
     [DataField, AutoNetworkedField]
     public string? HeldPrefix;
 
+    [DataField, AutoNetworkedField]
+    public bool Unisex = true; // Medieval
+
+    [DataField, AutoNetworkedField]
+    [ViewVariables(VVAccess.ReadOnly)]
+    public EntityUid? User; // Medieval
+
     /// <summary>
     ///     Rsi of the sprite shown on the player when this item is in their hands. Used to generate a default entry for <see cref="InhandVisuals"/>
     /// </summary>

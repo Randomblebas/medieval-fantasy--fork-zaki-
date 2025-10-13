@@ -108,7 +108,7 @@ public sealed class ClientClothingSystem : ClothingSystem
 
         List<PrototypeLayerData>? layers = null;
 
-        // DS14-Start
+        // Medieval-Start
         Sex? sex = null;
 
         if (TryComp(args.Equipee, out HumanoidAppearanceComponent? appearance))
@@ -126,7 +126,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         if (layers == null && sex != null)
             item.ClothingVisuals.TryGetValue($"{args.Slot}-{sex.Value}", out layers);
 
-        // DS14-End
+        // Medieval-End
 
         // if that returned nothing, attempt to find generic data
         if (layers == null && !item.ClothingVisuals.TryGetValue(args.Slot, out layers))
@@ -176,8 +176,6 @@ public sealed class ClientClothingSystem : ClothingSystem
 
         var correctedSlot = slot;
         TemporarySlotMap.TryGetValue(correctedSlot, out correctedSlot);
-
-
 
         var state = $"equipped-{correctedSlot}";
 
