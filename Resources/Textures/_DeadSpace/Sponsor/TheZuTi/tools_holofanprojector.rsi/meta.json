@@ -5,7 +5,7 @@
         "y": 32
     },
     "license": "CC-BY-SA-3.0",
-    "copyright": "modified from tgstation at commit  https://github.com/tgstation/tgstation/commit/40d89d11ea4a5cb81d61dc1018b46f4e7d32c62a  by hq._.dishka(discord), inhand by andrew_fenriz (discord) for Space Station 14 server Мёртвый Космос",
+    "copyright": "modified from tgstation at commit  https://github.com/tgstation/tgstation/commit/40d89d11ea4a5cb81d61dc1018b46f4e7d32c62a  by hq._.dishka(discord), inhand by andrew_fenriz (discord) for Space Station 14 project Мёртвый Космос",
     "states": [
         {
             "name": "icon",

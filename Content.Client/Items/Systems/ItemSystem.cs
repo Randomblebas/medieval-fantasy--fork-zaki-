@@ -67,9 +67,6 @@ public sealed class ItemSystem : SharedItemSystem
         // Medieval-Start
         Sex? sex = null;
 
-        if (item.User == null)
-            Log.Warning("User");
-
         if (TryComp(item.User, out HumanoidAppearanceComponent? humAppearance))
             sex = humAppearance.Sex;
 

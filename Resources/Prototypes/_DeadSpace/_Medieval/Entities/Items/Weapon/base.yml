@@ -478,13 +478,13 @@
     size: Ginormous
   - type: MeleeSkill
     skills:
-    - MedievalSpear
+    - MedievalAncientWeapons
   - type: LearnSkillWhenMeleeAttack
     whitelist:
       components:
       - MobState
     points:
-    - MedievalSpear: 0.01
+    - MedievalAncientWeapons: 0.01
   - type: Damageable
     damageContainer: MedievalInorganic
     damageModifierSet: MedievalIron

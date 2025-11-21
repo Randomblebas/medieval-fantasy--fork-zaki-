@@ -1,0 +1,424 @@
+# TemporarySlotMap
+# {"head", "HELMET"},
+#         {"eyes", "EYES"},
+#         {"ears", "EARS"},
+#         {"mask", "MASK"},
+#         {"outerClothing", "OUTERCLOTHING"},
+#         {Jumpsuit, "INNERCLOTHING"},
+#         {"neck", "NECK"},
+#         {"back", "BACKPACK"},
+#         {"belt", "BELT"},
+#         {"gloves", "HAND"},
+#         {"shoes", "FEET"},
+#         {"id", "IDCARD"},
+#         {"pocket1", "POCKET1"},
+#         {"pocket2", "POCKET2"},
+#         {"suitstorage", "SUITSTORAGE"},
+#         {"socks", "SOCKS"}, // DS14-Underwear
+#         {"underweart", "UNDERWEART"}, // DS14-Underwear
+#         {"underwearb", "UNDERWEARB"}, // DS14-Underwear
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: MedievalBaseClothing
+  components:
+  - type: Item
+    size: Normal
+  - type: Sprite
+  - type: FlavorProfile
+    flavors:
+    - fiber
+  - type: Wear
+  - type: Damageable
+    damageContainer: MedievalClothing
+    damageModifierSet: MedievalFlax
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# === BASE INNER CLOTHING ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseInnerClothing
+  name: рубаха
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [innerclothing]
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING-male
+      jumpsuit-Male:
+      - state: equipped-INNERCLOTHING-male
+      jumpsuit-Female:
+      - state: equipped-INNERCLOTHING-female
+
+# === BASE OUTER CLOTHING ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseOuterClothing
+  name: камзол
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [outerClothing]
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING-male
+      outerClothing-Male:
+      - state: equipped-OUTERCLOTHING-male
+      outerClothing-Female:
+      - state: equipped-OUTERCLOTHING-female
+
+# === BASE HEAD ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseHead
+  name: шлем
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [head]
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET-male
+      head-Male:
+      - state: equipped-HELMET-male
+      head-Female:
+      - state: equipped-HELMET-female
+
+# === BASE EYES ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseEyes
+  name: повязка на глаза
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [eyes]
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES-male
+      eyes-Male:
+      - state: equipped-EYES-male
+      eyes-Female:
+      - state: equipped-EYES-female
+
+# === BASE EARS ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseEars
+  name: серьги
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [ears]
+    clothingVisuals:
+      ears:
+      - state: equipped-EARS
+      ears-Male:
+      - state: equipped-EARS
+      ears-Female:
+      - state: equipped-EARS
+
+# === BASE MASK ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseMask
+  name: маска
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [mask]
+    clothingVisuals:
+      mask:
+      - state: equipped-MASK-male
+      mask-Male:
+      - state: equipped-MASK-male
+      mask-Female:
+      - state: equipped-MASK-female
+
+# === BASE NECK ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseNeck
+  name: ожерелье
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [neck]
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK
+      neck-Male:
+      - state: equipped-NECK
+      neck-Female:
+      - state: equipped-NECK
+
+# === BASE BACK ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseBack
+  name: плащ
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [back]
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      back-Male:
+      - state: equipped-BACKPACK
+      back-Female:
+      - state: equipped-BACKPACK
+
+# === BASE BELT ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseBelt
+  name: пояс
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [belt]
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+      belt-Male:
+      - state: equipped-BELT
+      belt-Female:
+      - state: equipped-BELT
+
+# === BASE GLOVES ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseGloves
+  name: перчатки
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [gloves]
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND-male
+      gloves-Male:
+      - state: equipped-HAND-male
+      gloves-Female:
+      - state: equipped-HAND-female
+
+# === BASE SHOES ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseShoes
+  name: сапоги
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [feet]
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET-male
+      shoes-Male:
+      - state: equipped-FEET-male
+      shoes-Female:
+      - state: equipped-FEET-female
+
+# === BASE ID ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseID
+  name: печать
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [idcard]
+    clothingVisuals:
+      id:
+      - state: equipped-IDCARD
+
+# === BASE POCKETS ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBasePocket1
+  name: кошель
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [pocket]
+    clothingVisuals:
+      pocket1:
+      - state: equipped-POCKET1
+
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBasePocket2
+  name: сумочка
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [pocket]
+    clothingVisuals:
+      pocket2:
+      - state: equipped-POCKET2
+
+# === BASE SUIT STORAGE ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseSuitStorage
+  name: подсумок
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [suitstorage]
+    clothingVisuals:
+      suitstorage:
+      - state: equipped-SUITSTORAGE
+
+# === BASE SOCKS ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseSocks
+  name: носки
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [socks]
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+      socks-Male:
+      - state: equipped-SOCKS
+      socks-Female:
+      - state: equipped-SOCKS
+
+# === BASE UNDERWEAR TOP ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseUnderwearT
+  name: нижняя рубашка
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [underweart]
+    clothingVisuals:
+      underweart:
+      - state: equipped-UNDERWEART-male
+      underweart-Male:
+      - state: equipped-UNDERWEART-male
+      underweart-Female:
+      - state: equipped-UNDERWEART-female
+
+# === BASE UNDERWEAR BOTTOM ===
+- type: entity
+  parent: MedievalBaseClothing
+  id: MedievalBaseUnderwearB
+  name: исподнее
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    slots: [underwearb]
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB-male
+      underwearb-Male:
+      - state: equipped-UNDERWEARB-male
+      underwearb-Female:
+      - state: equipped-UNDERWEARB-female
+
+
