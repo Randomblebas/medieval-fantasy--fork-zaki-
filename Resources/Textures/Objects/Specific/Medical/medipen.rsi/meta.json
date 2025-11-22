@@ -10,6 +10,12 @@
     {
       "name": "medipen"
     },
+	{
+      "name": "inhand-left"
+    },
+	{
+      "name": "inhand-right"
+    },
     {
       "name": "medipen_empty"
     },
