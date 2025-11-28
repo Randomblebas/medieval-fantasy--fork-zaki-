@@ -43,6 +43,13 @@
   categories:
   - MedievalWeaponCategory
 
+- type: latheRecipe
+  abstract: true
+  id: MedievalBaseArmorRecipe
+  completetime: 10
+  categories:
+  - MedievalMaterialArmorCategory
+
 ## Пилорама
 
 - type: latheRecipe
@@ -254,6 +261,13 @@
     MedievalRawCoal: 100
 
 # Кузня
+
+- type: latheRecipe
+  parent: MedievalBaseArmorRecipe
+  id: MedivalChainRecipe
+  result: MedivalChain
+  materials:
+    MedievalProcessedIron: 100
 
 - type: latheRecipe
   parent: MedievalBaseDetailsRecipe

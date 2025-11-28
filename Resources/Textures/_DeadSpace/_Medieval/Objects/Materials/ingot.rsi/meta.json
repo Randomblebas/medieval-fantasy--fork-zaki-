@@ -26,6 +26,14 @@
       "name": "mithril"
     },
 	{
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+	{
       "name": "adamantine-inhand-left",
       "directions": 4
     },

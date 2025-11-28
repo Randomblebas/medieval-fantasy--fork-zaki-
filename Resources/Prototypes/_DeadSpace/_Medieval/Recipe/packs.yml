@@ -136,6 +136,8 @@
   - MedievalSteelBrassKnucklesRecipe
   - MedievalWoodBrassKnucklesRecipe
   - MedievalIronBrassKnucklesRecipe
+  # Броня
+  - MedivalChainRecipe
 
 - type: latheRecipePack
   id: MedievalLoom

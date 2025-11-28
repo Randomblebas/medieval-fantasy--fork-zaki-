@@ -11,11 +11,11 @@
       "name": "icon"
     },
     {
-      "name": "equipped-INNERCLOTHING-male",
+      "name": "equipped-OUTERCLOTHING-male",
       "directions": 4
     },
     {
-        "name": "equipped-INNERCLOTHING-female",
+        "name": "equipped-OUTERCLOTHING-female",
         "directions": 4
     },
 	{
